@@ -3,7 +3,7 @@
 
 
 /* Logo CSS */ 
-.site-logo { 
+site-logo { 
   top: 60px; 
   color: #3c75de;
   padding: 10px;
@@ -14,26 +14,11 @@ body {
   padding: 0; 
   margin: 0;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background-color: #f8f9fa;
-  /*min-height: 100%;*/
-  position: relative; }
-  /*body:before {*/
-  /*  content: "";*/
-  /*  position: absolute;*/
-  /*  top: 0;*/
-  /*  left: 0;*/
-  /*  right: 0;*/
-  /*  bottom: 0;*/
-  /*  -webkit-transition: .3s all ease;*/
-  /*  -o-transition: .3s all ease;*/
-  /*  transition: .3s all ease;*/
-  /*  opacity: 0;*/
-  /*  visibility: hidden;*/
-  /*  z-index: 1; }*/
-  /*body.offcanvas-menu:before {*/
-  /*  opacity: 1;*/
-  /*  z-index: 1002;*/
-  /*  visibility: visible; }*/
+  background-color: #f3f5f7;
+  min-height: 100%;
+  position: relative; 
+    
+}
 
 p {
   color: #b3b3b3;
@@ -514,9 +499,6 @@ a {
       } 
         
     }
-
-        
-
 
 
 /* Footer */ 
