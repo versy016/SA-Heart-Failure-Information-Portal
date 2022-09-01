@@ -501,8 +501,8 @@ a {
     }
 
 
-/* Footer */ 
-footer-container{ 
+/* Footer  
+.footer-container{ 
     background-color: whitesmoke;
     padding: 10px 0 10px 0;
     height: 120px; 
@@ -518,5 +518,6 @@ p {
     margin-top: auto;
     align-items: center;
     text-align: center;
-}
+    justify-content: center; 
+} */
 

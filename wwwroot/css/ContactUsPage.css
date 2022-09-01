@@ -1,0 +1,40 @@
+/* body layout positioning and color*/
+body { 
+    background-color: #ffffff;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* setting paragraph text to bold and black */
+p {
+    font-weight: bold;
+    color:black
+  }
+
+
+/* Footer */ 
+.footer-container{ 
+    background-color: whitesmoke;
+    padding: 10px 0 10px 0;
+    height: 120px; 
+    width: 100%;
+    left: 0;
+    bottom: 0; 
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+p4 { 
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: black;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+        
