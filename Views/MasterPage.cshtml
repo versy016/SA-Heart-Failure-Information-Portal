@@ -12,23 +12,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
     <title>Heart Failure Information Portal</title> 
     
-    <link href="/css/MasterPage.css" rel="stylesheet" />
+    <link href="/css/MasterPage.css" rel="stylesheet"/>
     
 
 </head>
 <body>
     
     <!--Navigation Bar--> 
-    <div id="header"><embed type="text/html" src="headerpage.aspx" width= "1000">
+    <div id="header"><embed type="text/html" width= "1000">
      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
         <div class="col-12">
-             <div class="site-logo ">
-                <class="text-black"><span class="text-primary">CEIH</a>
-              </div>
              <nav class="site-navigation text-right ml-auto " role="navigation">
                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                  <li><a href="/Home" class="nav-link">Home</a></li>
                  <li><a href="/general-information" class="nav-link">General Information</a></li>
+                 
+                 <!--Settings Drop Down-->
                  <li class="has-children">
                     <a href="#" class="nav-link">About Us</a>
                     <ul class="dropdown arrow-top">
@@ -47,20 +46,20 @@
                   </li>
                   <li><a href="/sign-in" class="nav-link">Sign In</a></li>
                 </ul>
+                
               </nav>
-            </div>
             <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
         </div>
 
       </header>
-      
+          
      <!--Render--> 
      @RenderBody() 
     
-     <!--Footer & Lanugage Selector
+    <!--Footer & Lanugage Selector --> 
     <div class = "footer-container">
       <p>L7 Citi Centre Building, 11 Hindmarsh Square, Adelaide SA 5000 <br>©2021 Commission on Excellence and Innovation in Health</br></p>
-    </div> -->
+    </div>   
 
     <!-- Bootstrap scripts -->
     <script src="/scripts/jquery-3.3.1.min.js"></script>

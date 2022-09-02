@@ -56,13 +56,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("logIn")]
 		public virtual string LogIn => this.Value<string>(_publishedValueFallback, "logIn");
-
-		///<summary>
-		/// Sign.Up
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("signUp")]
-		public virtual string SignUp => this.Value<string>(_publishedValueFallback, "signUp");
 	}
 }

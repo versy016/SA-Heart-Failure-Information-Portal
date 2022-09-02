@@ -14,10 +14,13 @@
     <link href="/css/HomePage.css" rel="stylesheet" />
     
     <!--JS Search Bar Linking-->
-    <script type ="text/javascript"> 
-        function search() { 
-            document.getElementById("hp").href = "https://www.google.com.au/search?q=" + (document.getElementById("linkit").value); 
-        } 
+    <script> 
+            var url='google.com';
+            function search(){
+                url="https://"+url+'/search?q='+op('#srh').value;
+                window.open(url);
+         }
+          
     </script>
     
 </head> 

@@ -1,18 +1,8 @@
 
-/* Nav Bar * /
-
-
-/* Logo CSS */ 
-site-logo { 
-  top: 60px; 
-  color: #3c75de;
-  padding: 10px;
-}
-
-
 body {
   padding: 0; 
   margin: 0;
+  min-height: 100%;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #f3f5f7;
   min-height: 100%;
@@ -93,24 +83,15 @@ a {
     z-index: 3; 
       
   }
-    
-    @media (max-width: 991.98px) {
-      .site-navbar .site-logo {
-        float: left;
-        position: relative; 
-          
-      } 
-        
-    }
+  
   .site-navbar .site-navigation.border-bottom {
     border-bottom: 1px solid white !important; 
       
   }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; 
-    justify-content: right;
-    text-align:right;
-    padding-right: 50px;
+    text-align:center;
+    padding: 5px;
     font-size:20px;
       
   }
@@ -145,7 +126,7 @@ a {
     }
       .site-navbar .site-navigation .site-menu .has-children > a {
         position: relative;
-        padding-right: 20px; 
+        padding: 20px; 
           
       }
         
@@ -215,11 +196,7 @@ a {
               color: #ced4da; 
                 
             }
-         .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > a:before {
-            content: "\e315";
-            right: 20px; 
-              
-          }
+
           .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-navbar .site-navigation .site-menu .has-children .dropdown > li.has-children > ul {
             left: 100%;
             top: 0; }
@@ -444,9 +421,9 @@ a {
         }
 
 .sticky-wrapper {
-  position: relative;
-  z-index: 100;
-  width: 100%; 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
     
 }
   .sticky-wrapper .site-navbar {
@@ -501,15 +478,16 @@ a {
     }
 
 
-/* Footer  
+/* Footer */ 
 .footer-container{ 
     background-color: whitesmoke;
-    padding: 10px 0 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 120px; 
     width: 100%;
-    margin-top: auto;
-    position: absolute;
-    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0PX;
 }
 
 p { 
@@ -519,5 +497,5 @@ p {
     align-items: center;
     text-align: center;
     justify-content: center; 
-} */
+} 
 
