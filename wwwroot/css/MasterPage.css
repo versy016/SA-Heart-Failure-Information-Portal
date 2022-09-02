@@ -420,7 +420,7 @@ a {
             
         }
 
-.sticky-wrapper {
+sticky-wrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -481,21 +481,20 @@ a {
 /* Footer */ 
 .footer-container{ 
     background-color: whitesmoke;
-    padding-left: 10px;
-    padding-right: 10px;
+    
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
     height: 120px; 
-    width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0PX;
+    /*width: 100%;*/
+    /*position: -webkit-sticky;*/
+    /*position: sticky;*/
+    /*bottom: 0PX;*/
+    top: 10px;
 }
 
-p { 
+h5{
     color: black;
-    display: flex;
-    margin-top: auto;
-    align-items: center;
+    top: 10px;
     text-align: center;
-    justify-content: center; 
 } 
 
