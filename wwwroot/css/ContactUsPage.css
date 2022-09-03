@@ -1,40 +1,96 @@
-/* body layout positioning and color*/
 body { 
-    background-color: #ffffff;
-    background-size: 100%;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-
+    
+    
 }
 
-/* setting paragraph text to bold and black */
-p {
-    font-weight: bold;
-    color:black
-  }
+/*Map*/
+.map { 
+    padding: 10px; 
+    margin: 20px;
+    text-align:center;
+} 
 
+/*Contact Us Section/Div*/ 
+.contact-container { 
+    
+    height: 100vh;
+    margin: 30px;
+    padding: 20px;
+} 
 
-/* Footer */ 
-.footer-container{ 
-    background-color: whitesmoke;
-    padding: 10px 0 10px 0;
-    height: 120px; 
+/*Contact Field*/ 
+.contact-box { 
+    background-color: white;
+    display: flex;
+    border: 1px solid black;
+}
+
+.contact-left { 
+    flex-basis: 70%;
+    padding: 40px 60px;
+} 
+
+.contact-right { 
+    flex-basis: 30%;
+    padding: 40px;
+    background-color: #aae7f3; 
+} 
+
+/*Input feilds for the contact form*/
+.input-row { 
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+} 
+
+.input-row .input-group { 
+  flex-basis: 20%;
+  outline: none;
+}
+
+button { 
+  background: #1c00b5; 
+  width: 100px; 
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+} 
+
+input {
     width: 100%;
-    left: 0;
-    bottom: 0; 
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 2px;
 }
-p4 { 
-    font-family: sans-serif;
-    font-weight: lighter;
-    color: black;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-}
-        
+
+
+/* Text Box Area- Messaging*/
+textarea { 
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+} 
+
+label { 
+    font-family: arial;
+    margin-bottom: 6px;
+    display: block;
+    color: #1c00b5;
+} 
+
+h3 h1 { 
+  margin-bottom: 5px;  
+} 
+
+p { 
+  margin-bottom: 40px;  
+  color: black;
+} 
+
