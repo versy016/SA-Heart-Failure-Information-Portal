@@ -13,26 +13,26 @@
     <link href="/css/MasterPage.css" rel="stylesheet" />
     <link href="/css/HomePage.css" rel="stylesheet" />
     
-    <!--JS Search Bar Linking-->
-    <script> 
-            var url='google.com';
-            function search(){
-                url="https://"+url+'/search?q='+op('#srh').value;
-                window.open(url);
-         }
-          
-    </script>
-    
 </head> 
-<body style="background-color:#d1d1d1;"> 
+<body> 
 
     <!--Search Bar --> 
     <div class = "searchContainer"> 
         <form>
-            <input type = "text" placeholder = "Search..." id = "linkit"> 
-            <button type = "submit"> Search</button>
+            <input type = "text" name = "" placeholder = "Search..." class = "query" value = ""> 
+            <button class = "submit">Search</button>
         </form>
     </div>
+    
+    <!--JS for the Search bar-->
+    <script> 
+        let query = document.querySelector('.query'); 
+        let search = document.querySelector('.submit'); 
+        search.onclick = function(){
+            let url = 'https://www.google.com/search?q=' + query.value; 
+            window.open(url, '_self'); 
+        }
+    </script>
     
     <!--Coloumn Cards--> 
     <section class="light">

@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content:center;
   align-items:center;
-  margin:23px;
+  margin:25px;
   
   background-image: url('/media/popf3xbi/Gen.jpg');
   filter: blur(4px);

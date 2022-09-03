@@ -2,7 +2,8 @@
 body {
   padding: 0; 
   margin: 0;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  min-height: 100%;
+  font-family: arial;
   background-color: #f3f5f7;
   position: relative; 
     
@@ -480,7 +481,7 @@ a {
 
 /* Footer */ 
 .footer-container{ 
-    background-color: whitesmoke;
+    background-color: #aae7f3;
     height: 120px; 
     top: 10px;
 }

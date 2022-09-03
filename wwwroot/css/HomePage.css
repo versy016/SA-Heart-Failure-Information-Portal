@@ -4,6 +4,12 @@
     padding: 0; 
 }
 
+body { 
+  
+  background-color: #d1d1d1, 0.2;  
+    
+} 
+
 /* Search Bar */
 .searchContainer {
   align-content: center;
@@ -33,15 +39,13 @@ form button {
     color: white;
     cursor: pointer;
     border-radius: 4px;
+    font-family: arial;
+    font-weight: bolder;
 } 
         
 /* Cards */
 .dark {
-  background: #110f16;
-}
-
-.light {
-  background: #f3f5f7;
+  background-color: #d1d1d1, 0.2;
 }
 
 a,
@@ -59,7 +63,7 @@ a:hover {
 
 /* Cards */
 .light {
-  background-color: #d1d1d1;
+  background-color: #d1d1d1, 0.2;
   padding-top: 20px; 
 }
 .postcard {
