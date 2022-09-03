@@ -1,30 +1,35 @@
+
+    
+body { 
+    
+} 
+
+/* About Us*/ 
+.about-us-container {
+    
+    height: 100vh;
+    margin:auto;
+    padding-left: 50px; 
+    padding-right: 50px; 
+    padding-top: 10px; 
+    background-color: white;
+} 
+    
+h1 { 
+    
+  font-family: arial;
+  font-weight: bold; 
+  font-size: 40px; 
+} 
+
+P { 
+    
+  font-family: arial;
+  color: black;
+    
+} 
+
 /* Cards */
-.dark {
-  background: #110f16;
-}
-
-.light {
-  background: #f3f5f7;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-#pageHeaderTitle {
-  margin: 2rem 0;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 2.5rem;
-}
-
-/* Cards */
-.light {
-  background-color: #d1d1d1;
-  padding-top: 20px; 
-}
 .postcard {
   flex-wrap: wrap;
   display: flex;
@@ -192,47 +197,6 @@ a:hover {
   }
 }
 /* COLORS */
-.postcard .postcard__tagbox .green.play:hover {
-  background: #79dd09;
-  color: black;
-}
-
-.green .postcard__title:hover {
-  color: #79dd09;
-}
-
-.green .postcard__bar {
-  background-color: #79dd09;
-}
-
-.green::before {
-  background-image: linear-gradient(-30deg, rgba(121, 221, 9, 0.1), transparent 50%);
-}
-
-.green:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(121, 221, 9, 0.1), transparent 50%);
-}
-
-.postcard .postcard__tagbox .blue.play:hover {
-  background: #0076bd;
-}
-
-.blue .postcard__title:hover {
-  color: #0076bd;
-}
-
-.blue .postcard__bar {
-  background-color: #0076bd;
-}
-
-.blue::before {
-  background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
-}
-
-.blue:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%);
-}
-
 .postcard .postcard__tagbox .red.play:hover {
   background: #bd150b;
 }
@@ -253,44 +217,8 @@ a:hover {
   background-image: linear-gradient(30deg, rgba(189, 21, 11, 0.1), transparent 50%);
 }
 
-.postcard .postcard__tagbox .yellow.play:hover {
-  background: #bdbb49;
-  color: black;
-}
-
-.yellow .postcard__title:hover {
-  color: #bdbb49;
-}
-
-.yellow .postcard__bar {
-  background-color: #bdbb49;
-}
-
-.yellow::before {
-  background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.1), transparent 50%);
-}
-
-.yellow:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
-}
 
 @media screen and (min-width: 769px) {
-  .green::before {
-    background-image: linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%);
-  }
-
-  .green:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(121, 221, 9, 0.1), transparent 50%);
-  }
-
-  .blue::before {
-    background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
-  }
-
-  .blue:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
-  }
-
   .red::before {
     background-image: linear-gradient(-80deg, rgba(189, 21, 11, 0.1), transparent 50%);
   }
@@ -298,13 +226,3 @@ a:hover {
   .red:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%);
   }
-
-  .yellow::before {
-    background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
-  }
-
-  .yellow:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
-  }
-}
-        

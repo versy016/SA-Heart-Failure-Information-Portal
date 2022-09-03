@@ -1,57 +1,81 @@
+body { 
+    
+    background-color: #d1d1d1, 0.2;
+} 
 
+/*Title-page*/ 
+.border  {
+    margin-top: 20px; 
+    padding: 20px; 
+    
+}
 
-.header { 
+.intro-img { 
   
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url ("//media/popf3xbi/gen.jpg");
-  color:white;
-  background-size:cover; 
-     
+  margin:23px;
+  
+  background-image: url('/media/popf3xbi/Gen.jpg');
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  z-index: 2; 
+  background-repeat: no-repeat;
+  background-size: cover;
 } 
 
-.about {
+.gen-info {
     
-    height: 300vh;
-    display: flex; 
+  /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-family: arial;
 }
 
-.about-title { 
+/* General Information Title*/
+.gen-content { 
     
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+    height: 80vh;
+    width: 92.5%;
+    margin:auto;
+    padding-left: 50px; 
+    padding-right: 50px; 
+    padding-top: 10px; 
+    background-color: white;
 } 
 
-.about-pages {
-    width: 50%;
-}
+h2, h4 { 
+  
+  font-family: arial;
+  font-weight: bold; 
+  font-size: 40px; 
+} 
 
+h3 { 
+  
+  text-align: right;
+  font-family: arial;
+  font-weight: bold; 
+  font-size: 40px; 
+} 
 
-.about-pagess div {
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.about-pagess div p{ 
-    width: 80%;
-    font-size: 18px;
-    line-height: 30px;
+p { 
     
-} 
-
-.about-page div:nth-child(1) { 
-    background-color:blue;
-} 
-
-.about-page div:nth-child(2) { 
-    background-color:green;
+  font-family: arial;
+  color: black;
 } 
