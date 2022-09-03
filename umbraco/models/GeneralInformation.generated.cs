@@ -56,5 +56,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("genInfoTitle")]
 		public virtual string GenInfoTitle => this.Value<string>(_publishedValueFallback, "genInfoTitle");
+
+		///<summary>
+		/// InfoLayout
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("infoLayout")]
+		public virtual global::Newtonsoft.Json.Linq.JToken InfoLayout => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "infoLayout");
 	}
 }
