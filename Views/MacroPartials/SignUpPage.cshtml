@@ -15,13 +15,14 @@
         // Set the member type alias to use for the new member
         .WithMemberTypeAlias(Constants.Conventions.MemberTypes.DefaultAlias)
         // If null or not set, this will redirect to the current page
-        .WithRedirectUrl(null)
+        .WithRedirectUrl("/Log-in/")
         // Set to true if you want the member editable properties shown.
         // It will only displays properties marked as "Member can edit" on the "Info" tab of the Member Type.
         .WithCustomProperties(false)
         .Build();
 
     var success = TempData["FormSuccess"] != null;
+    registerModel.RedirectUrl = "/sign-in/";
 }
     <link href="/css/MasterPage.css" rel="stylesheet"/>
 
@@ -33,6 +34,12 @@
 {
     @* This message will show if registerModel.RedirectUrl is not defined (default) *@
     <p class="text-success">Registration succeeded.</p>
+    using (Html.BeginUmbracoForm<UmbRegisterController>(
+                            "HandleRegisterMember",
+                            new
+                            {
+                                RedirectUrl = registerModel.RedirectUrl
+                            }));
 }
 else
 {
