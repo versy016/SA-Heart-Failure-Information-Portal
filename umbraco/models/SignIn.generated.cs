@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Sign In</summary>
+	/// <summary>Log In</summary>
 	[PublishedModel("signIn")]
 	public partial class SignIn : PublishedContentModel
 	{
