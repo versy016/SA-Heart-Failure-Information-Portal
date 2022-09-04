@@ -56,5 +56,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("logIn")]
 		public virtual string LogIn => this.Value<string>(_publishedValueFallback, "logIn");
+
+		///<summary>
+		/// loginCredentials
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("loginCredentials")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString LoginCredentials => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "loginCredentials");
 	}
 }

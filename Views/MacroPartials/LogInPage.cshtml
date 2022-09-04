@@ -71,6 +71,8 @@ else
             </div>
 
             <button type="submit" class="btn btn-primary">Log in</button>
+            <!--Links to the sign up page--> 
+            <button type="sign-up" class="btn btn-secondary"><a href = "/sign-up/">Sign Up</a></button>
 
 
         }
@@ -95,7 +97,7 @@ else
                 <button type="submit" name="provider" value="@login.ExternalLoginProvider.AuthenticationType">
                     Sign in with @login.AuthenticationScheme.DisplayName
                 </button>
-
+                
                 if (externalSignInError?.AuthenticationType == login.ExternalLoginProvider.AuthenticationType)
                 {
                     @Html.DisplayFor(x => externalSignInError.Errors);
