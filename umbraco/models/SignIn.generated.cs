@@ -58,7 +58,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string LogIn => this.Value<string>(_publishedValueFallback, "logIn");
 
 		///<summary>
-		/// Login credentials
+		/// loginCredentials
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]

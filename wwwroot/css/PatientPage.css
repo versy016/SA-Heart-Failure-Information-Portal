@@ -1,0 +1,85 @@
+
+body {
+  /* display: flex; */
+  flex-wrap: nowrap;
+  height: 100vh;
+  height: -webkit-fill-available;
+  
+}
+
+#sidebar{
+float: left;  
+width: 280px;
+height: 1100px;
+padding-right: 20rem;
+}
+.card {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+} 
+
+.row{
+  justify-content: center;
+
+}
+.table caption{
+  caption-side: top;
+  padding: 1rem;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0464f4;
+
+}
+#row :nth-child(2){
+  padding: 10rem;
+}
+.card-columns{
+  justify-content: center;
+
+}
+.card-deck{
+  padding: 2rem;
+}
+.card:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.bi {
+  vertical-align: -.125em;
+  pointer-events: none;
+  fill: currentColor;
+}
+
+.button-34 {
+  background: #0464f4;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 8px 18px;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+.button{
+  padding: 1rem;
+
+
+}
