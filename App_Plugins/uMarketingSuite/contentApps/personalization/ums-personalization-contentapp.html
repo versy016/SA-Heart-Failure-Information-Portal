@@ -1,0 +1,22 @@
+﻿<div ng-controller="umsPersonalizationContentAppCtrl as $ctrl"
+     tab-focus-once="$ctrl.load()">
+    <div class="u-marketing-suite-dashboard in-content">
+        <ums-screens name="Personalization" icon-name="personalization">
+            <ums-screen name="Personalized variants" ng-if="$ctrl.showApplyPersonalization">
+                <ums-applied-personalization-single-page></ums-applied-personalization-single-page>
+            </ums-screen>
+
+            <ums-screen name="Content scoring" ng-if="$ctrl.showScorePersonalization">
+                <ums-personalization-scoring ng-if="$ctrl.loaded"></ums-personalization-scoring>
+            </ums-screen>
+
+            <ums-screen name="Segment insights" ng-if="$ctrl.showApplyPersonalization">
+                <ums-personalization-segment-insights></ums-personalization-segment-insights>
+            </ums-screen>
+
+            <ums-screen name="Applied segments insights" ng-if="$ctrl.showApplyPersonalization">
+                <ums-personalization-applied-segments-insights></ums-personalization-applied-segments-insights>
+            </ums-screen>
+        </ums-screens>
+    </div>
+</div>

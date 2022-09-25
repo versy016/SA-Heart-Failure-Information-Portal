@@ -1,0 +1,10 @@
+<div ng-controller="umsAnalyticsContentAppCtrl as $ctrl"     
+	 tab-focus-once="$ctrl.load()">
+	 
+ 	<div class="u-marketing-suite-dashboard in-content">
+		<ums-analytics  ng-if="$ctrl.loaded" 
+                 		content-id="$ctrl.contentId"
+                 		culture="$ctrl.culture">
+   		</ums-analytics>
+   	</div>
+</div>
