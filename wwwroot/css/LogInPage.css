@@ -1,13 +1,39 @@
 
 body {
-  background: linear-gradient(135deg, c);
+    background: linear-gradient(135deg, c);
     font-family: 'Ubuntu', sans-serif;
+}
+
+.mb-3{ 
+    text-align: center;
+} 
+
+.mb-3-form-check  { 
+     text-align: center;
+} 
+
+.btn-primary { 
+    text-align: center;
+} 
+
+.btn-secondary { 
+    text-align: center;
+}
+
+.btn-third { 
+    text-align: center;
 }
 
 h2{
     padding-top: 20px;
 
 }
+
+h4{ 
+    text-align:center;    
+} 
+
+
 .main {
     background-color: rgb(255, 255, 255);
     width: 500px;
