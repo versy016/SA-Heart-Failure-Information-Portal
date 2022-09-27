@@ -1,0 +1,127 @@
+﻿<div tab-focus-once="$ctrl.fn.load()">
+
+    <div class="u-marketing-suite-dashboard in-content"
+         ng-if="$ctrl.enabled"
+         ng-switch="$ctrl.state.view">
+        <!-- topbar -->
+        <div class="ums-topbar__container">
+            <div class="ums-content ums-topbar__content">
+                <div class="ums-topbar__icon">
+                    <ums-icon id="icon-ab-testing" modifier="lg"></ums-icon>
+                </div>
+                <div class="ums-topbar__title">A/B Testing</div>
+                <ums-package-status></ums-package-status>
+                <div class="ums-topbar__logo">
+                    <img src="/App_Plugins/uMarketingSuite/Assets/ums-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="ums-subnav__container">
+            <div class="ums-content">
+                <ul class="ums-subnav__list">
+                </ul>
+            </div>
+            <div class="ums-contentbar__badge">
+                <ums-icon id="icon-ab-testing" modifier="md"></ums-icon>
+                <span>A/B Testing</span>
+            </div>
+        </div>
+
+        <ums-loader ng-if="$ctrl.state.loaded === false"></ums-loader>
+        <!-- Page test overview -->
+        <div ng-switch-when="main" ng-if="$ctrl.state.loaded">
+            <div class="ums-content umsPaddingTop">
+                <div class="ums-flexgrid__container ums-flexgrid__container--lg is-animated" ng-if="$ctrl.state.testsForPage.length === 0">
+                    <div class="ums-flexgrid__item ums-flexgrid__item--1-1 umsPaddingBottom">
+                        <div class="ums-testdetail__empty__container">
+                            <img src="/App_Plugins/uMarketingSuite/Assets/a-b-testing.svg" alt="">
+                            <br />
+                            <h2>There are no A/B tests created for this page yet</h2>
+                            <span ng-show="$ctrl.state.contentId === 0">This Umbraco node needs to be saved before you can start a new A/B test</span>
+                            <button class="ums-button ums-button--success ums-button--icon"
+                                    type="button"
+                                    ng-show="$ctrl.state.contentId > 0"
+                                    ng-click="$ctrl.fn.startTest()">
+                                <span>Start a test</span>
+                                <ums-icon id="icon-arrow" modifier="btn"></ums-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ums-flexgrid__container ums-flexgrid__container--lg is-animated" ng-if="$ctrl.state.testsForPage.length > 0">
+                    <div class="ums-flexgrid__item ums-flexgrid__item--1-3">
+                        <div class="ums-boxed__container is-animated">
+                            <h2>A/B testing on this page</h2>
+                            <div class="umsDescription">
+                                <p>
+                                    <span ng-show="$ctrl.state.segmentSupport">Start an A/B test for this page. This will default to a Single Page test which allows you to A/B test Umbraco content.</span>
+                                    <span ng-show="!$ctrl.state.segmentSupport">Start an A/B test.</span>
+                                </p>
+                            </div>
+                            <br />
+                            <button class="ums-button ums-button--success ums-button--icon"
+                                    type="button"
+                                    ng-click="$ctrl.fn.startTest()">
+                                <span>Start a test</span>
+                                <ums-icon id="icon-arrow" modifier="btn"></ums-icon>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ums-flexgrid__item ums-flexgrid__item--2-3 umsPaddingBottom">
+
+                        <ums-ab-testing-test-filters filters="$ctrl.state.filters">
+                        </ums-ab-testing-test-filters>
+
+                        <div class="ums-alert__container ums-alert__container--warning" ng-if="($ctrl.state.testsForPage | filter:$ctrl.fn.filterTests).length === 0">No tests could be found matching your search criteria.</div>
+
+                        <ums-ab-testing-test-list tests="$ctrl.state.testsForPage | filter:{status:2} | filter:$ctrl.fn.filterTests"
+                                                  header="Running"
+                                                  on-click="$ctrl.fn.openTest(test.abTestId, test.status)">
+                        </ums-ab-testing-test-list>
+
+                        <ums-ab-testing-test-list tests="$ctrl.state.testsForPage | filter:{status:3} | filter:$ctrl.fn.filterTests"
+                                                  header="Stopped"
+                                                  on-click="$ctrl.fn.openTest(test.abTestId, test.status)">
+                        </ums-ab-testing-test-list>
+
+                        <ums-ab-testing-test-list tests="$ctrl.state.testsForPage | filter:$ctrl.fn.filterScheduledOrDraft | filter:$ctrl.fn.filterTests"
+                                                  header="New"
+                                                  on-click="$ctrl.fn.openTest(test.abTestId, test.status)">
+                        </ums-ab-testing-test-list>
+
+                        <ums-ab-testing-test-list tests="$ctrl.state.testsForPage | filter:{status:4} | filter:$ctrl.fn.filterTests"
+                                                  header="Completed"
+                                                  on-click="$ctrl.fn.openTest(test.abTestId, test.status)">
+                        </ums-ab-testing-test-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create test -->
+        <div ng-switch-when="create">
+            <ums-ab-testing-create-test edit-variant="$ctrl.fn.editVariant(test, variant, defaultFn)"
+                                        enable-single-page="$ctrl.state.segmentSupport"
+                                        test-type="$ctrl.state.segmentSupport ? 0 : 1"
+                                        back="$ctrl.state.view = 'main'; $ctrl.fn.refreshTestsForPage()"
+                                        on-created="$ctrl.fn.onCreatedTest(test)">
+            </ums-ab-testing-create-test>
+        </div>
+
+        <!-- Test detail -->
+        <div ng-switch-when="detail">
+            <ums-ab-testing-create-test ng-if="$ctrl.state.testDetail.draft"
+                                        edit-variant="$ctrl.fn.editVariant(test, variant, defaultFn)"
+                                        on-created="$ctrl.fn.onCreatedTest(test)"
+                                        back="$ctrl.state.view = 'main'; $ctrl.fn.refreshTestsForPage()"
+                                        id="$ctrl.state.testDetail.id"
+                                        enable-single-page="true">
+            </ums-ab-testing-create-test>
+            <ums-ab-testing-test-detail ng-if="!$ctrl.state.testDetail.draft"
+                                        back="$ctrl.state.view = 'main'; $ctrl.fn.refreshTestsForPage()"
+                                        test-id="$ctrl.state.testDetail.id"></ums-ab-testing-test-detail>
+        </div>
+    </div>
+</div>

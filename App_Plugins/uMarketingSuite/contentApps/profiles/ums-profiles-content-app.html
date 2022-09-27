@@ -1,0 +1,12 @@
+﻿<div tab-focus-once="$ctrl.load()">
+    <div class="u-marketing-suite-dashboard in-content">
+        <ums-screens name="Profiles" icon-name="profiles">
+            <ums-screen name="Activity">
+                <ums-profile-activity 
+                    ng-if="!$ctrl.state.isLoading"
+                    show-related-profiles="true"
+                    visitor-ids="$ctrl.state.visitorIds"></ums-profile-activity>
+            </ums-screen>
+        </ums-screens>
+    </div>
+</div>
