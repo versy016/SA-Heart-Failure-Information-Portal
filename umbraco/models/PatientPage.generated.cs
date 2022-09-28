@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Patient Page</summary>
+	/// <summary>PatientPage</summary>
 	[PublishedModel("PatientPage")]
 	public partial class PatientPage : PublishedContentModel
 	{
@@ -48,6 +48,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// PatientContent: Content Section for patients
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("patientContent")]
+		public virtual global::Newtonsoft.Json.Linq.JToken PatientContent => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "patientContent");
 
 		///<summary>
 		/// PatientPage

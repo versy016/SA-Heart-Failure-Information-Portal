@@ -19,8 +19,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 
 <!--CSS--> 
-<link rel="stylesheet" href="/css/LogInPage.css">
 
+<link href="/css/MasterPage.css" rel="stylesheet"/>
+<link href="/css/SignUpPage.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 @if (ViewData.TryGetTwoFactorProviderNames(out var providerNames))
 {
@@ -52,7 +54,7 @@ else
 
     @using (Html.BeginUmbracoForm<UmbLoginController>(
         "HandleLogin", new { RedirectUrl = loginModel.RedirectUrl })) {
-
+        <div class ="container-signup">
             <h4>Login</h4>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -67,18 +69,18 @@ else
                 <span asp-validation-for="@loginModel.Password" class="form-text text-danger"></span>
             </div>
             <div class="mb-3-form-check">
-                <input asp-for="@loginModel.RememberMe" class="form-check-input">
-                <label asp-for="@loginModel.RememberMe" class="form-check-label">
+                <input asp-for="@loginModel.RememberMe" class="form-check-input-remember">
+                <label asp-for="@loginModel.RememberMe" class="form-check-remember">
                     @Html.DisplayNameFor(m => loginModel.RememberMe)
                 </label>
             </div>
 
-            <button type="submit" class="btn-primary"><a href = "/patient-portal/">Log in</a></button>
+            <button type="submit" class="button-login"><a href = "/patient-portal/" class="logintext">Log in</a></button>
             <!--Links to the sign up page--> 
-            <button type="sign-up" class="btn-secondary"><a href = "/sign-up/">Sign Up</a></button>
-            <button type="sign-up" class="btn-third"><a href = "https://localhost:44363/umbraco">Administrator Access</a></button>
+            <button type="sign-up" class="button-signup"><a href = "/sign-up/" class="logintext">Sign Up</a></button>
+            <button type="sign-up" class="button-admin"><a href = "https://localhost:44363/umbraco" class="logintext">Admin</a></button>
 
-
+        </div>
         }
 @{
     var loginProviders = await memberExternalLoginProviders.GetMemberProvidersAsync();
