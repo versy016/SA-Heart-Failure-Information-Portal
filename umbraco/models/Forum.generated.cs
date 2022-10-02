@@ -115,27 +115,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		[ImplementPropertyType("postAtRoot")]
 		public virtual bool PostAtRoot => this.Value<bool>(_publishedValueFallback, "postAtRoot");
-
-		///<summary>
-		/// Hide Children From Nav
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[ImplementPropertyType("hideChildrenFromNav")]
-		public virtual bool HideChildrenFromNav => global::Umbraco.Cms.Web.Common.PublishedModels.ForumCommon.GetHideChildrenFromNav(this, _publishedValueFallback);
-
-		///<summary>
-		/// Umbraco Navi Hide
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => global::Umbraco.Cms.Web.Common.PublishedModels.ForumCommon.GetUmbracoNaviHide(this, _publishedValueFallback);
-
-		///<summary>
-		/// Umbraco Url Alias
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("umbracoUrlAlias")]
-		public virtual string UmbracoUrlAlias => global::Umbraco.Cms.Web.Common.PublishedModels.ForumCommon.GetUmbracoUrlAlias(this, _publishedValueFallback);
 	}
 }

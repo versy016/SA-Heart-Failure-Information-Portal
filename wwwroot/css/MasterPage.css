@@ -10,7 +10,9 @@ body {
 
 p {
   color: #b3b3b3;
-  font-weight: 300; }
+  font-weight: 300; 
+    
+}
 
 .btn-skin-1.signin-button{
     color: #fff;
@@ -23,9 +25,9 @@ p {
     transition: all 0.1s ease-in-out;
     cursor: pointer;
     font-weight: 700;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 18px;
-    margin-left: 20px;
+    margin-left: 80px;
     
 }
 .btn-skin-1.btn-circle{
@@ -36,7 +38,7 @@ p {
     border-radius: 64px;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 5px;
 }
 
 li h3 { 
