@@ -1,8 +1,25 @@
 
+
 body {
     background: linear-gradient(135deg, c);
     font-family: 'Ubuntu', sans-serif;
 }
+
+.login-form { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+    
+    border-style: thick;
+    border-color: black; 
+    
+} 
 
 .mb-3{ 
     text-align: center;
@@ -14,6 +31,13 @@ body {
 
 .btn-primary { 
     text-align: center;
+    align-content: center;
+    justify-content: center;
+    
+    display: flex;
+    margin: auto;
+    padding: 2px;
+    border-radius: 2px
 } 
 
 .btn-secondary { 
