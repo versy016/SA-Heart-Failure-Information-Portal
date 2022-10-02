@@ -1,35 +1,101 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Members>
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    Layout = "ForumMaster.cshtml";
+	Layout = "MasterPage.cshtml";
+}
+<!doctype html>
+<html lang="en">
+  <head>
 
-    int.TryParse(Context.Request.Query["page"], out var pagenum);
-    if (pagenum == 0)
-    {
-        pagenum = 1;
-    }
-    var pageSize = Model.HasValue("intPageSize") ? Model.Value("intPageSize") : 10;
-    ViewBag.Page = pagenum;
-    var isLoggedIn = Context.User?.Identity?.IsAuthenticated ?? false;
-}
-@section ForumHeader{
-    <meta name="robots" content="noindex,nofollow" />
-}
-@if (isLoggedIn)
-{
-    <div class="wiz-forum-info">
-        <div class="page-header">
-            <h3>@Model.Value("title")</h3>
+    <!-- Bootstrap CSS -->
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/MembersPage.css"/>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--<link rel="stylesheet" href="css/members.css"/>-->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+      var pageWidth = document.documentElement.clientWidth
+    </script>
+   
+  </head>
+
+  <body>
+
+      <div class="container">
+        <div class="section-title">
+            <h1>Committee Members</h1>
         </div>
-        <div class="forum-intro">
-            @Html.Raw(Model.Value("message"))
+
+        <div class="row">
+
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="Images/profileimg.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Member 1</h2>
+                        <h3>Position</h3>
+                        <p>Some text goes here that describes about team members</p>
+                        <h4>abc@gmail.com</h4>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="Images/profileimg.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Member 2</h2>
+                        <h3>Position</h3>
+                        <p>Some text goes here that describes about team members</p>
+                        <h4>abc@gmail.com</h4>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="Images/profileimg.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Member 3</h2>
+                        <h3>Position</h3>
+                        <p>Some text goes here that describes about team members</p>
+                        <h4>abc@gmail.com</h4>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="Images/profileimg.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2>Member 4</h2>
+                        <h3>Position</h3>
+                        <p>Some text goes here that describes about team members</p>
+                        <h4>abc@gmail.com</h4>
+                    </div>
+                  
+                </div>
+            </div>
+
         </div>
+
     </div>
-    <div class="row">
-        <div class="col-12">
-            @await Html.PartialAsync("Forums/_Members")
-        </div>
-    </div>
-}
+    </body>
+      
 
 
+</html>
