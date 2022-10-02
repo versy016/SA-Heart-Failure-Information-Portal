@@ -8,10 +8,10 @@ body {
 }
 
 
-p {
-  color: #b3b3b3;
-  font-weight: 300; 
-    
+p.footer {
+     color: white;
+    font-weight: 300;
+    line-height: 20px;
 }
 
 .btn-skin-1.signin-button{
@@ -38,7 +38,7 @@ p {
     border-radius: 64px;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 li h3 { 
@@ -119,7 +119,7 @@ a {
         margin-left: 15px;
         margin-right: 15px;
         padding: 20px 0px;
-        color: #f31f1f !important;
+        color: #f9f9f9 !important;
         display: inline-block;
         text-decoration: none !important; 
         font-weight: bolder;
@@ -442,7 +442,7 @@ a {
       
   }
   .sticky-wrapper .site-navbar {
-    background: #fff; 
+    background: #1e1d1d; 
       
   }
     .sticky-wrapper .site-navbar .site-logo a {
