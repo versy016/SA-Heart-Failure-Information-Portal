@@ -1,81 +1,65 @@
-body { 
-    
-    background-color: #d1d1d1, 0.2;
-} 
 
-/*Title-page*/ 
-.border  {
-    margin-top: 20px; 
-    padding: 20px; 
+/*Main Body*/
+.gen-body { 
     
-}
-
-.intro-img { 
-  
-  height: 70vh;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  margin:25px;
-  
-  background-image: url('/media/popf3xbi/Gen.jpg');
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  z-index: 2; 
-  background-repeat: no-repeat;
-  background-size: cover;
-} 
-
-.gen-info {
+    min-height: 200vh;
+    padding: 5px;
+    margin: 5px;
     
-  /* Black w/opacity/see-through */
-  background-color: rgba(0,0,0, 0.4); 
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  
-  width: 50%;
-  padding: 20px;
-  text-align: center;
-  font-size: 20px;
-  font-family: arial;
-}
-
-/* General Information Title*/
-.gen-content { 
-    
-    height: 80vh;
-    width: 92.5%;
-    margin:auto;
-    padding-left: 50px; 
-    padding-right: 50px; 
-    padding-top: 10px; 
     background-color: white;
-} 
-
-h2, h4 { 
-  
-  font-family: arial;
-  font-weight: bold; 
-  font-size: 40px; 
-} 
-
-h3 { 
-  
-  text-align: right;
-  font-family: arial;
-  font-weight: bold; 
-  font-size: 40px; 
-} 
-
-p { 
+    border-style: solid; 
     
-  font-family: arial;
-  color: black;
+} 
+
+/*1st Section*/
+.card-class-1 { 
+    
+    height: 70vh;
+    padding: 5px;
+    margin: 1px;
+    
+    background-color: blue;
+    border-style: solid; 
+    
+} 
+
+/*2nd Section*/
+.card-class-2 { 
+    
+    height: 50vh;
+    padding: 5px;
+    margin: 1px;
+    
+    background-color: red;
+    border-style: solid; 
+} 
+
+.inner-left-2 { 
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 2px;
+    
+    background-color: green;
+}
+                
+.inner-right-2 { 
+    float: right;
+    width: 70%;
+    height: 100%;
+    padding: 2px;
+    
+    background-color: yellow;
+} 
+
+
+/*3rd Section*/
+.card-class-3 { 
+    
+    height: 75vh;
+    padding: 5px;
+    margin: 1px;
+    
+    background-color: teal;
+    border-style: solid; 
 } 
