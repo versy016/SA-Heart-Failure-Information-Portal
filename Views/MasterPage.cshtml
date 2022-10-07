@@ -24,24 +24,31 @@
         <div class="col-12">
              <nav class="site-navigation text-right ml-auto " role="navigation">
                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                 <li><a href="/Home" class="nav-link">Home</a></li>
+                 <li class ="li-home" style="margin-left: 200px;"><a href="/Home" class="nav-link">Home</a></li>
                  <li><a href="/General-information" class="nav-link">General Information</a></li>
                  <li><a href="/Members" class="nav-link">Members</a></li>
                  <li><a href="/contact-us" class="nav-link">Contact Us</a></li>
                  
                   <!-- Search Button -->
-                    <button class="btn-skin-1 btn-circle" type="button" placeholder="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="white" class="bi bi-search-heart-fill" viewBox="0 0 16 16">
-                            <path d="M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
-                        </svg>
-                    </button>
-                
+                   
+                <li class="content">
+                    <div class="search">
+                        <input type="text" class="search__input" aria-label="search" placeholder="enter your search">
+                            <button class="btn-skin-1 btn-circle" type="button" placeholder="Search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-search-heart-fill" viewBox="0 0 16 16">
+                                    <path d="M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                                </svg>
+                            </button>                    
+                    </div>
+                </li>
                 <!-- Sign in button -->
                  <a class="btn-skin-1 signin-button" type="button" target="_blank" href="/log-in/">Sign In</a>
+                        
                 </ul>
               </nav>
             <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
         </div>
+        
     </header>
       
     @RenderBody() 
