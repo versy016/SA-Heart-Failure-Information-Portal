@@ -538,6 +538,7 @@ h5{
   background: transparent;
   opacity: 0;
   cursor: pointer;
+  color: white;
 }
 
 .search:focus-within {

@@ -100,7 +100,6 @@ a {
         margin-left: 15px;
         margin-right: 15px;
         padding: 20px 0px;
-        color: #000 !important;
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
@@ -344,7 +343,7 @@ a {
     -o-transition: .3s all ease;
     transition: .3s all ease; }
   .sticky-wrapper .site-navbar {
-    background: #fff; }
+    background: #1e1d1d;  }
     .sticky-wrapper .site-navbar .site-logo a {
       color: #fff; }
     .sticky-wrapper .site-navbar ul li a {
@@ -474,3 +473,7 @@ a {
   .footer-32892 .site-logo {
     color: #fff;
     font-size: 20px; }
+    
+.search__input {
+    color: black;
+}

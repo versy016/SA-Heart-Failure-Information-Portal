@@ -10,7 +10,7 @@ body {
 #sidebar{
 float: left;  
 width: 280px;
-height: 1100px;
+height: 90vh;
 padding-right: 20rem;
 }
 .card {
