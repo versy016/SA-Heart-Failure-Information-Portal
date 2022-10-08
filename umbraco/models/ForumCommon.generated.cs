@@ -22,6 +22,18 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>ForumCommon</summary>
 	public partial interface IForumCommon : IPublishedElement
 	{
+		/// <summary>Hide Children From Nav</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		bool HideChildrenFromNav { get; }
+
+		/// <summary>Umbraco Navi Hide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		bool UmbracoNaviHide { get; }
+
+		/// <summary>Umbraco Url Alias</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string UmbracoUrlAlias { get; }
 	}
 
 	/// <summary>ForumCommon</summary>
@@ -54,5 +66,40 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Hide Children From Nav
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[ImplementPropertyType("hideChildrenFromNav")]
+		public virtual bool HideChildrenFromNav => GetHideChildrenFromNav(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Hide Children From Nav</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		public static bool GetHideChildrenFromNav(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "hideChildrenFromNav");
+
+		///<summary>
+		/// Umbraco Navi Hide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public virtual bool UmbracoNaviHide => GetUmbracoNaviHide(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Umbraco Navi Hide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		public static bool GetUmbracoNaviHide(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "umbracoNaviHide");
+
+		///<summary>
+		/// Umbraco Url Alias
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("umbracoUrlAlias")]
+		public virtual string UmbracoUrlAlias => GetUmbracoUrlAlias(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Umbraco Url Alias</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetUmbracoUrlAlias(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "umbracoUrlAlias");
 	}
 }

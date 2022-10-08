@@ -26,11 +26,11 @@
 }
     <link href="/css/MasterPage.css" rel="stylesheet"/>
     <link href="/css/SignUpPage.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 
 @if (success)
 {
@@ -43,7 +43,7 @@
                                 RedirectUrl = registerModel.RedirectUrl
                             }));
 }
-else
+@else
 {
     using (Html.BeginUmbracoForm<UmbRegisterController>(
             "HandleRegisterMember",
@@ -53,9 +53,9 @@ else
                 RedirectUrl = registerModel.RedirectUrl
             }))
     {
+    
     <div class="container-signup">
         <h2>Create a new account</h2>
-        <hr />
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@registerModel.Name" class="form-label"></label>
@@ -92,6 +92,8 @@ else
         }
 
         <button type="submit" class="button-Register">Register</button>
-        </div>
+        
+    </div> 
+    
     }
 }

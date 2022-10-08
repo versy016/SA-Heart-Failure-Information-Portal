@@ -4,9 +4,6 @@
     margin: 5px; 
     padding: 5px;
     
-     /* DELETE WHEN DONE */
-    border-style: solid;
-    
     /* Flex */
     display: flex;
     flex-direction: row; 
@@ -18,9 +15,6 @@
     margin: 5px;
     margin-top: 5px;
     padding: 5px;
-    
-     /* DELETE WHEN DONE */
-    border-style: solid;
     
     /* Flex */
     display: flex;
@@ -35,20 +29,85 @@
     margin-top: 5px;
     padding: 5px;
     
-     /* DELETE WHEN DONE */
-    border-style: solid;
-    
     /* Flex */
     display: flex;
     flex-direction: row; 
     
 } 
 
- /* First Row of Members */
+ /* Members Cards */
 .member-card { 
     height: 400px;
     width: 30%;
     border-style: solid;
     margin: 5px 20px 5px 20px; 
-    padding: 2px;
+    padding: 10px;
+    
+    border: 1px solid #5e615f;
+    border-radius: 25px;
+    background-color: white;
+} 
+
+ /* Members Cards */
+.member-card:hover { 
+    height: 400px;
+    width: 30%;
+    border-style: solid;
+    margin: 5px 20px 5px 20px; 
+    padding: 10px;
+    
+    border: 1px solid #5e615f;
+    border-radius: 25px;
+    background-color: #989c99;
+} 
+
+
+/* Image & Fonts */
+
+.heading-title { 
+    text-align: center;
+    padding: 20px;
+    font-size: 40px
+} 
+
+.heading-title::after { 
+    content: '';
+    display: block;
+    position: absolute;
+    
+    background: #910c0c;
+    width: 100px;
+    height: 3px;
+    
+    margin-left: 45%;
+    margin-top: 3px;
+} 
+
+img { 
+  margin-left: 35px;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+} 
+
+.title {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center
+} 
+
+.subtitle { 
+    
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+} 
+
+.info-text { 
+    color: black;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    display: block;
 } 
