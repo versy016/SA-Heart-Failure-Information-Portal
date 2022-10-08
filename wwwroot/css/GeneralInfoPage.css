@@ -6,8 +6,7 @@
     padding: 5px;
     margin: 5px;
     
-    background-color: white;
-    border-style: solid; 
+    background-color: #eceae9;
     
 } 
 
@@ -16,10 +15,10 @@
     
     height: 70vh;
     padding: 5px;
-    margin: 1px;
+    margin: 10px;
     
-    background-color: blue;
-    border-style: solid; 
+    background-color: white;
+    border-radius: 10px;
     
 } 
 
@@ -28,10 +27,10 @@
     
     height: 50vh;
     padding: 5px;
-    margin: 1px;
+    margin: 10px;
     
-    background-color: red;
-    border-style: solid; 
+    background-color: white;
+    border-radius: 10px;
 } 
 
 .inner-left-2 { 
@@ -39,8 +38,6 @@
     width: 30%;
     height: 100%;
     padding: 2px;
-    
-    background-color: green;
 }
                 
 .inner-right-2 { 
@@ -48,8 +45,6 @@
     width: 70%;
     height: 100%;
     padding: 2px;
-    
-    background-color: yellow;
 } 
 
 
@@ -58,8 +53,199 @@
     
     height: 75vh;
     padding: 5px;
-    margin: 1px;
+    margin: 10px;
+    border-radius: 10px;
     
-    background-color: teal;
-    border-style: solid; 
+    background-color: white;
+     
+} 
+
+.card-inner-3 { 
+    background: #eceae9;
+    padding: 5px;
+    margin-left: 10px;
+    width: 48%;
+    height: 65%;
+    
+    border-style: solid;
+    border-radius: 10px;
+    float: left;
+} 
+
+.card-inner-4 {
+    background: #eceae9;
+    padding: 5px;
+    margin-right: 10px;
+    width: 48%;
+    height: 65%;
+    
+    border-style: solid;
+    border-radius: 10px;
+    float: right;
+
+}
+
+
+/*Fonts*/
+
+.heading-title {
+    font-family: sans-serif;
+    text-align: left;
+    padding: 5px;
+    font-size: 40px
+} 
+
+.heading-title::after { 
+    font-family: sans-serif;
+    content: '';
+    display: block;
+    position: absolute;
+    
+    background: #910c0c;
+    width: 80px;
+    height: 3px;
+    
+    margin-left: 2px;
+    margin-top: 3px;
+    
+}
+
+
+.subtitle { 
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 6px;
+    color: #c8102e;
+} 
+
+.subtitle-1 {
+    font-family: sans-serif;
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    padding-left: 6px;
+    margin-top: 20px;  
+    
+} 
+
+.subtitle-2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 6px;
+
+}
+
+.def-text { 
+    padding-left: 6px;
+    font-size: 15px;
+    line-height: normal;
+    color: black;
+    
+} 
+
+ul { 
+  color: black;
+  font-size: 15px;
+    
+} 
+
+/* Split Div*/
+.inner-class-title { 
+    font-family: sans-serif;
+    padding-left: 5px;
+    font-size: 40px;
+    color:black;
+} 
+
+.inner-right-subtitle {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.inner-right-text {
+    font-family: sans-serif;
+    padding-left: 5px;
+    color: black;
+    font-size: 15px;
+    line-height:normal;
+    
+}
+
+.inner-right-text-1 { 
+    font-family: sans-serif;
+    padding-left: 5px;
+    color: black;
+    font-size: 15px;
+    line-height:normal;
+   
+} 
+
+
+.text-inner-section {
+    font-family: sans-serif;
+    padding-left: 10px;
+    color: black;
+    font-size: 15px;
+    line-height:normal;
+    
+}
+
+.card-title {
+    
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+/*Images*/
+
+.heartImg {
+    height: 293px;
+    width: 100%;
+    border-radius: 5px;
+    
+} 
+
+
+/*Button*/
+
+.learn-button { 
+    text-align:center;
+    background-color: #c8102e;
+    color: white;
+    
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    
+    margin-left: 40%;
+    
+} 
+
+.learn-button-1 { 
+    text-align:center;
+    background-color: #c8102e;
+    color: white;
+    
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    
+    margin-left: 40%;
+    margin-top: 55px;
+    
 } 
