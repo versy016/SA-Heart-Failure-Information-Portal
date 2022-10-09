@@ -35,11 +35,11 @@ h2{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #e4c2c2, #8f6eb4);
+   background: #c8102e;
 }
 
 .button-Register input:hover{
-  background: linear-gradient(135deg, #e4c2c2, #d8c0f1);
+  background: #c8102e;
   }
   
 .button-login{
@@ -55,7 +55,7 @@ h2{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #e4c2c2, #8f6eb4);
+   background: #c8102e;
 }
 .button-signup{
    height: auto;
@@ -70,7 +70,7 @@ h2{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #e4c2c2, #8f6eb4);
+   background: #c8102e; 
 }
 .button-admin{
    height: auto;
@@ -85,7 +85,7 @@ h2{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #e4c2c2, #8f6eb4);
+   background: #c8102e; 
 }
 .logintext{
     color: white
