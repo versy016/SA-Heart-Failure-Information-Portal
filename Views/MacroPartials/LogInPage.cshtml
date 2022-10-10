@@ -11,7 +11,7 @@
 @{
     var loginModel = new LoginModel();
     // You can modify this to redirect to a different URL instead of the current one
-    loginModel.RedirectUrl = null;
+    loginModel.RedirectUrl = "/patientportal/";
 }
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -55,7 +55,7 @@ else
             "HandleLogin", new { RedirectUrl = loginModel.RedirectUrl })) {
             <div class ="container-signup">
                 
-                <h4>Login</h4>
+                <h2 class="h2-login">Login</h2>
                 <hr />
                 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
@@ -78,7 +78,7 @@ else
                 </div>
                 
                 <!--Log in page--> 
-                <button type="submit" class="button-login"><a href = "/patient-portal/" class="logintext">Log in</a></button>
+                <button type="submit" class="button-login"><a href = "/patientportal/" class="logintext">Log in</a></button>
                 
                 <!--Links to the sign up page--> 
                 <button type="sign-up" class="button-signup"><a href = "/sign-up/" class="logintext">Sign Up</a></button>

@@ -5,12 +5,25 @@ margin: auto;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(230, 181, 181, 0.15);
-  
+  margin-top :90px;
+  margin-bottom :90px;
 }
 
-h2{
+h2.signup-h2{
     text-align: center;
+    margin-bottom: 50px;
 }
+
+h2.h2-login{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+div.login-form{
+      margin-top :170px;
+  margin-bottom :170px;
+}
+
 .form-control{
     
   height: 45px;
@@ -20,6 +33,7 @@ h2{
   border-radius: 5px;
   border-bottom-width: 2px;
   transition: all 0.3s ease;
+
 }
 
 .button-Register{
@@ -36,6 +50,7 @@ h2{
    cursor: pointer;
    transition: all 0.3s ease;
    background: #c8102e;
+   margin-top :15px;
 }
 
 .button-Register input:hover{
