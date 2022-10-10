@@ -10,7 +10,7 @@ body {
 #sidebar{
 float: left;  
 width: 280px;
-height: 90vh;
+height: 95vh;
 padding-right: 20rem;
 }
 .card {
@@ -24,7 +24,7 @@ padding-right: 20rem;
 
 .row{
   justify-content: center;
-
+  margin-top: 50px;
 }
 .table caption{
   caption-side: top;
@@ -49,7 +49,10 @@ padding-right: 20rem;
   transform: translateY(-0.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
 }
-
+p.card-text{
+font-weight: 400;
+color: black;
+}
 .card-img {
   display: block;
 
