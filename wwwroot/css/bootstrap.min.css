@@ -1,9 +1,4 @@
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   -blue: #007bff;
   -indigo: #6610f2;
@@ -2608,7 +2603,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
-
+  
+  width: 150px;
+    
+  position: absolute;
+  margin-left: 20px;
+  bottom: 10px;
 
 }
 
@@ -4871,6 +4871,7 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
+/*Card body*/
 .card {
   position: relative;
   display: -webkit-box;
@@ -4886,6 +4887,8 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  
+  height: 25rem;
 }
 
 .card > hr {
@@ -4903,6 +4906,7 @@ input[type="button"].btn-block {
   border-bottom-left-radius: 0.25rem;
 }
 
+/*Nearby Services*/
 .card-body {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
