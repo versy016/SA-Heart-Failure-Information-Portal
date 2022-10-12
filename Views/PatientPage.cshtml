@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="/css/Style.css" />
 
     <link rel="stylesheet" href="/css/PatientPage.css" />
+    
+     <!--Disables Signin button-->
+    <script> 
+        window.addEventListener('load', function () {
+            const element = document.getElementById("myBtn");
+            element.remove();
+        })
+    </script>
 
 
     <title>Patient Page</title>
@@ -59,17 +67,8 @@
         <hr>
          <!-- Highlighting Dashboard Items-->
         <ul class="nav nav-pills flex-column mb-auto">
-          
             <li>
-                <a href="patientPage.aspx" class="nav-link text-white">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#speedometer2" />
-                    </svg>
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="discussionforum.aspx" class="nav-link text-white">
+                <a href="/discussion-forum/" class="nav-link text-white">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#table" />
                     </svg>

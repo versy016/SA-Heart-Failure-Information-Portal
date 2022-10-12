@@ -13,10 +13,40 @@
     <!--CSS-->
     <link href="/css/MasterPage.css" rel="stylesheet" />
     <link href="/css/DiscussionForumPage.css" rel="stylesheet" />
+    
+    <!--Javascript Add post-->
+    <script src = "/scripts/discussionForum.js"></script>
+    
+    <!--Disables Signin button-->
+    <script> 
+        window.addEventListener('load', function () {
+            document.getElementById("myBtn").disabled = true; 
+        })
+    </script>
    
     
 </head> 
 <body> 
+
+    <!--Body of the forum-->
+    <div class = "main-body" runat="server">
+        
+        <!--Forum Table-->
+        <table class = "table">
+            <tr class = "forum-table-name">
+                <th>Post</th>
+                <th>Name</th>
+                <th>Date</th>
+            </tr>
+        </table>
+        
+        <!--Data Input-->
+        <div id = "data"> 
+            <input type= "text" id = "description" class = "description" placeholder = "Description..."> 
+            <button class = "post-btn">Post</button>
+        </div>
+        
+    </div>
 
 </body> 
 </html>

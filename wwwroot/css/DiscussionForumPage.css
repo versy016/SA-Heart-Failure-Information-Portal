@@ -1,2 +1,53 @@
 
-        
+/* Body */
+.main-body { 
+    background: white;
+    height: 200vh;
+    padding: 10px;
+    
+    margin-top: 20px;
+    margin-left: 40px;
+    
+} 
+
+/* Main Table */
+.table {
+    width: 200vh;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Heading Text */
+.forum-table-name { 
+    text-align: left;
+    font-family: arial;
+    font-size: 20px;
+} 
+
+/* Posting */
+.post-btn { 
+    padding: 5px;
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 10px;
+    
+    background-color: #c8102e;
+    color: white;
+    font-family: arial;
+    
+} 
+
+.description{ 
+    width: 200vh;
+    height: 50px;
+    margin-top: 100px;
+    border-radius: 2px;
+} 
+
+
+/* Font */
+
+th { 
+  padding: 10px;  
+} 
