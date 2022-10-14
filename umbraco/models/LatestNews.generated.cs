@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Latest News</summary>
+	/// <summary>Nurse Roster</summary>
 	[PublishedModel("latestNews")]
 	public partial class LatestNews : PublishedContentModel
 	{
