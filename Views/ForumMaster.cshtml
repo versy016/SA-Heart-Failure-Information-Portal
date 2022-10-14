@@ -8,7 +8,7 @@
     // @RenderSection("Header", false) should go in your head section
     // @RenderSection("PageScripts", false) should go just above the closing body tag
 
-    Layout = "cmsMaster.cshtml";
+    Layout = "null";
     var allowimages = Model.Value<bool>("allowImages", fallback: Fallback.ToAncestors);
     var ForumUrl = Umbraco.GetDictionaryValue("Forums.ForumUrl", "/forums").TrimEnd('/');
     string returnUrl = null;
