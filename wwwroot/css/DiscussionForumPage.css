@@ -46,8 +46,8 @@
     border-style: solid;
 } 
 
-.main-card { 
-    width: 100px;
+.main-card-container-post { 
+    width: 38rem;
 } 
 
 .card-card-body { 
