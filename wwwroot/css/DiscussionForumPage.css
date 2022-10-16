@@ -1,64 +1,88 @@
 
 /* Body */
-.main-forum-body { 
-    background-color: #d6d6d6;
-    min-height: 150vh;
-    padding: 10px;
+/*.main-forum-body { */
+/*    background-color: #d6d6d6;*/
+/*    min-height: 150vh;*/
+/*    padding: 10px;*/
     
-} 
+/*} */
 
 /* Forum */
-.the-forum-class {
-    min-height: 150vh;
-    padding: 5px;
-    background-color: white;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 5px;
+/*.the-forum-class {*/
+/*    min-height: 150vh;*/
+/*    padding: 5px;*/
+/*    background-color: white;*/
+/*    border-style: solid;*/
+/*    border-width: thin;*/
+/*    border-radius: 5px;*/
     
-}
+/*}*/
 
-.the-forum-header { 
-    width: 200vh;
-    padding: 10px;
-    margin: 20px 25px 0px 30px;
-    text-align: center; 
+/*.the-forum-header { */
+/*    width: 200vh;*/
+/*    padding: 10px;*/
+/*    margin: 20px 25px 0px 30px;*/
+/*    text-align: center; */
     
-    font-family: arial;
-    font-size: 20px;
-    background-color: white;
-} 
+/*    font-family: arial;*/
+/*    font-size: 20px;*/
+/*    background-color: white;*/
+/*} */
 
 /* Header Row */
-.header-class { 
-    background-color: #c8102e;
-    border: 1px solid black;
-    color: white;
-} 
+/*.header-class { */
+/*    background-color: #c8102e;*/
+/*    border: 1px solid black;*/
+/*    color: white;*/
+/*} */
 
 /* Post */
-.forum-post-class { 
-    height: 50vh;
-    padding: 5px;
-    margin-top: 20px;
+/*.forum-post-class { */
+/*    height: 50vh;*/
+/*    padding: 5px;*/
+/*    margin-top: 20px;*/
     
-    background-color: blue;
-    border-style: solid;
-} 
+/*    background-color: blue;*/
+/*    border-style: solid;*/
+/*} */
 
-.main-card-container-post { 
-    width: 38rem;
-} 
+/*.main-card-container-post { */
+/*    width: 38rem;*/
+/*} */
 
-.card-card-body { 
+/*.card-card-body { */
      
-} 
+/*} */
 
 
 /* Table rows and columns */
+* {
+    margin: auto;
+}
 th,td {
   border: 1px solid black;
   font-size: 15px;
+}
+.container{
+    margin: auto;
+
+}
+button.btn-post{
+    height: 40px;
+    margin-right: 35px;
+    padding: 5px;
+    
+    border-radius: 10px;
+    border-color: black;
+    color: white;
+    background-color: #c8102e;
+}
+button.btn-cancel{
+    height: 40px;
+    border-radius: 10px;
+    color: red;
+    font: bold;
+    border-color: black;
 }
 
 /* Button */
