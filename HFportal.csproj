@@ -4,6 +4,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Assets\uMarketingSuite\**" />
+    <Compile Remove="config\uMarketingSuite\**" />
+    <Content Remove="Assets\uMarketingSuite\**" />
+    <Content Remove="config\uMarketingSuite\**" />
+    <EmbeddedResource Remove="Assets\uMarketingSuite\**" />
+    <EmbeddedResource Remove="config\uMarketingSuite\**" />
+    <None Remove="Assets\uMarketingSuite\**" />
+    <None Remove="config\uMarketingSuite\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Our.Umbraco.BackOfficeThemes" Version="3.0.0" />
@@ -16,6 +26,11 @@
     <PackageReference Include="Umbraco.Forms" Version="10.1.0" />
     <PackageReference Include="uSync" Version="10.1.0" />
     <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="config\" />
   </ItemGroup>
 
   <PropertyGroup>

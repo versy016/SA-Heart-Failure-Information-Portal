@@ -18,32 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	// Mixin Content Type with alias "forumCommon"
-	/// <summary>ForumCommon</summary>
-	public partial interface IForumCommon : IPublishedElement
-	{
-		/// <summary>Hide Children From Nav</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		bool HideChildrenFromNav { get; }
-
-		/// <summary>Umbraco Navi Hide</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		bool UmbracoNaviHide { get; }
-
-		/// <summary>Umbraco Url Alias</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string UmbracoUrlAlias { get; }
-	}
-
-	/// <summary>ForumCommon</summary>
-	[PublishedModel("forumCommon")]
-	public partial class ForumCommon : PublishedElementModel, IForumCommon
+	/// <summary>ForumMembership</summary>
+	[PublishedModel("forumAuthHolder")]
+	public partial class ForumAuthHolder : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		public new const string ModelTypeAlias = "forumCommon";
+		public new const string ModelTypeAlias = "forumAuthHolder";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
@@ -52,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<ForumCommon, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<ForumAuthHolder, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public ForumCommon(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public ForumAuthHolder(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -68,26 +50,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Hide Children From Nav
+		/// Message
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[ImplementPropertyType("hideChildrenFromNav")]
-		public virtual bool HideChildrenFromNav => GetHideChildrenFromNav(this, _publishedValueFallback);
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("message")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Message => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "message");
 
-		/// <summary>Static getter for Hide Children From Nav</summary>
+		///<summary>
+		/// Title
+		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		public static bool GetHideChildrenFromNav(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "hideChildrenFromNav");
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("title")]
+		public virtual string Title => this.Value<string>(_publishedValueFallback, "title");
 
 		///<summary>
 		/// Umbraco Navi Hide
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		[ImplementPropertyType("umbracoNaviHide")]
-		public virtual bool UmbracoNaviHide => GetUmbracoNaviHide(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Umbraco Navi Hide</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		public static bool GetUmbracoNaviHide(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "umbracoNaviHide");
+		public virtual bool UmbracoNaviHide => this.Value<bool>(_publishedValueFallback, "umbracoNaviHide");
 
 		///<summary>
 		/// Umbraco Url Alias
@@ -95,11 +78,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("umbracoUrlAlias")]
-		public virtual string UmbracoUrlAlias => GetUmbracoUrlAlias(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Umbraco Url Alias</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.1.0+3972538")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetUmbracoUrlAlias(IForumCommon that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "umbracoUrlAlias");
+		public virtual string UmbracoUrlAlias => this.Value<string>(_publishedValueFallback, "umbracoUrlAlias");
 	}
 }
