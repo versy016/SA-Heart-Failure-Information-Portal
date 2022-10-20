@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <PackageReference Include="Our.Umbraco.BackOfficeThemes" Version="3.0.0" />
-    <PackageReference Include="uMarketingSuite" Version="1.20.1" />
     <PackageReference Include="Umbraco.Cms" Version="10.1.0" />
   </ItemGroup>
 
