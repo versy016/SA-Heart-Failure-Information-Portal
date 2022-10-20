@@ -83,13 +83,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/umbraco/lib/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="/scripts/mediawiz.forums.min.js" referrerpolicy="origin"></script>
-    <script>
-        var MediaWiz = MediaWiz || { };
-        MediaWiz.returnUrl = '@TempData["returnUrl"]';
-        if ('@allowimages' === 'True') {
-            MediaWiz.tools = MediaWiz.tools + "| image ";
-        }
-
-    </script>
+   
     @RenderSection("ForumScripts", required: false)
 }
