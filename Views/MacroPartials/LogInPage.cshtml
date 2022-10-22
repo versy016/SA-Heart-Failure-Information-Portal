@@ -74,7 +74,11 @@ else
                     <input asp-for="@loginModel.RememberMe" class="form-check-input-remember">
                     <label asp-for="@loginModel.RememberMe" class="form-check-remember">
                         @Html.DisplayNameFor(m => loginModel.RememberMe)
-                    </label>
+                    </label><br>
+                    
+                    <!--Reset Password--> 
+                    <a href="/change-password/">Reset Password</a><br><br> 
+                    
                 </div>
                 
                 <!--Log in page--> 

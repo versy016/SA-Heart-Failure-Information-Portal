@@ -1,2 +1,66 @@
 
-        
+.main-body { 
+    min-height: 100vh;
+    padding: 5px; 
+    
+}
+
+/* PDF Body */ 
+.pdf-file-uploader { 
+    height: 100vh; 
+    margin: 10px;
+    padding: 10px; 
+    border-radius: 10px;
+    border: 2px solid;
+} 
+
+/* Table Properties */
+.the-forum-class {
+    min-height: 100vh;
+    padding: 5px;
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 5px;
+    
+}
+
+/*The Table Body*/
+.forum-header { 
+    width: 200vh;
+    padding: 10px;
+    margin: 20px 25px 200px 20px;
+    text-align: center; 
+    
+    font-family: arial;
+    font-size: 20px;
+    background-color: white;
+    
+    border: 1px solid black; 
+} 
+
+/* Header Row */
+thead { 
+    background-color: #c8102e;
+    border: 1px solid black;
+    color: white;
+    
+} 
+
+
+/* Upload Button*/
+
+.custom-button {
+  padding: 10px;
+  margin-left: 25px;
+  width: 400px;
+  color: white;
+  background-color: #c8102e;
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #00b28f;
+}
