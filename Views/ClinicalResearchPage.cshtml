@@ -23,6 +23,7 @@
             
         const realFileBtn = document.getElementById("real-file");
         const table = document.getElementById("myTable");
+        var uploadBtn = document.getElementById("uploadBtn");
                 
         realFileBtn.addEventListener("click", function() {
             realFileBtn.click();
@@ -31,11 +32,12 @@
         
         //Adds to the table 
         function appendFunction(){ 
-            var row = table.insertRow(0);
-            var cell1 = row.insertCell(0);
+            var row = table.insertRow(2);
+            var cell1 = row.insertCell(2);
             cell1.innerHTML = realFileBtn;
         } 
-                
+        
+        //Selects the file        
         realFileBtn.addEventListener("change", function() {
             if (realFileBtn.value) {
                 customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
@@ -43,6 +45,9 @@
                 customTxt.innerHTML = "Select a File";
             }
         });
+        
+        //Upload Button
+        uploadBtn.addEventListener("click", appendFunction);
     
     </script>
     
@@ -68,7 +73,8 @@
             </table>
             
             <!--Upload File Button --> 
-            <input type="file" id="real-file" class ="custom-button" onclick="appendFunction()">
+            <input type="file" id="real-file" class ="custom-button">
+            <button type="button" id="uploadBtn">Upload</button> 
         
         </div>
     </div>
