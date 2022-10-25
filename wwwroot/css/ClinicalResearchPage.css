@@ -64,3 +64,18 @@ thead {
 .custom-button:hover {
   background-color: #00b28f;
 }
+
+.upload-button {
+    padding: 10px;
+    margin-left: 20px;
+    width: 100px; 
+    color: white;
+    background-color: #c8102e;
+     border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #00b28f;
+}
