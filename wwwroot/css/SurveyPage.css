@@ -1,6 +1,71 @@
+/* Main Body*/
 .survey-main-body{ 
     height: 100vh;
     padding: 5px; 
     
 } 
 
+/* Survey Section Subbody */ 
+.survey-section { 
+    margin: 20px; 
+    padding: 10px;
+    min-height: 70vh; 
+    border: 2px solid black;
+    border-radius: 5px; 
+    background-color: #ebe4e4;
+} 
+
+/* Styling form-control input, select, textarea */
+.form-control-1 { 
+    margin: 10px;
+} 
+
+/* Styling form-control Radio button and Checkbox */
+.form-control-1 input[type="radio"], .form-control-1 input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-left: 20px; 
+}
+
+.role { 
+    margin-left: 10px; 
+    width: 300px
+} 
+
+.role-1 { 
+    margin-left: 90px; 
+    width: 300px;
+} 
+
+/*Age and Email Input*/
+.input-email { 
+    margin-left: 209px;
+    width: 300px;
+} 
+
+.input-age { 
+    margin-left: 220px;
+    width: 300px;
+} 
+
+/*Button & Comment Box*/
+.suggestionBox{
+    width: 100%; 
+    height: 50%;
+    
+    padding: 10px;
+}
+
+.submit-btn { 
+    padding: 5px; 
+    width: 100px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-family: arial;
+    
+    color: white;
+    background-color: #c8102e;
+    
+    border-color: black;
+    border-radius: 15px;
+} 

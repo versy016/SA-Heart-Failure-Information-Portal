@@ -19,10 +19,97 @@
 <body> 
 
     <div class = "survey-main-body">
-        
-        
-        
+  
+        <div class = "survey-section">
+            
+            <div class="form-control-1">
+                    <label for="email" id="label-email"> Email </label>
+         
+                    <!-- Input Type Email-->
+                    <input type="email" class = "input-email" id="email"/>
+            </div>
+      
+            <div class="form-control-1">
+                <label for="age" id="label-age"> Age </label>
+     
+                <!-- Input Type Text -->
+                <input type="text" class = "input-age" id="age"/>
+            </div>
+            
+            <div class="form-control-1">
+                <label for="role" id="label-role">Which option best describes you?</label>
+                 
+                <!-- Dropdown options -->
+                <select name="role" id="role" class = "role">
+                    <option value="student">High-School Student</option>
+                    <option value="intern">University, Tafe or something equivalent</option>
+                    <option value="intern">Trade</option>
+                    <option value="intern">Professional</option>
+                    <option value="intern">Retired</option>
+                    <option value="professional">Unemployed</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-control-1">
+                <label for="role" id="label-role">Select Your Nationality</label>
+                 
+                <!-- Dropdown options -->
+                <select name="role" id="role" class = "role-1">
+                    <option value="student">Oceania</option>
+                    <option value="intern">South-East Asian</option>
+                    <option value="intern">Asian</option>
+                    <option value="intern">Subcontinent Asia</option>
+                    <option value="intern">Middle-Eastern</option>
+                    <option value="intern">African</option>
+                    <option value="professional">Western-European</option>
+                    <option value="other">Eastern-European</option>
+                    <option value="other">Mediterranean</option>
+                    <option value="other">North-American</option>
+                    <option value="other">Southern/Central-American</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+      
+            <div class="form-control-1">
+                <label>Would you recommend the Heart Failure Patient Portal</label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio" id="recommed-1"name="recommed">Yes</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio" id="recommed-2" name="recommed">No</input>
+                </label>
+            </div>
+      
+            <div class="form-control-1">
+                <label>Rate Your Satisfaction 1-5 <small> (5 being the Highest)</small></label>
+                <!-- Input Type Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox" name="inp">1</input></label>
+                <label for="inp-2">
+                    <input type="checkbox" name="inp">2</input></label>
+                <label for="inp-3">
+                    <input type="checkbox" name="inp">3</input></label>
+                <label for="inp-4">
+                    <input type="checkbox" name="inp">4</input></label>
+                <label for="inp-5">
+                    <input type="checkbox" name="inp">5</input></label>
+            </div>
+      
+            <div class="form-control-1">
+                <label for="comment"> How Could We Improve For You? </label></br> 
+     
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment" placeholder="Enter your comment here" class ="suggestionBox"></textarea>
+            </div>
+      
+            <!-- Multi-line Text Input Control -->
+            <button type="submit" value="submit" class = "submit-btn">Submit</button>
+            
+        </div>
     </div>
-
+    
 </body> 
 </html>
