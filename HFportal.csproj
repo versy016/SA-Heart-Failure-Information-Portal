@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Our.Umbraco.BackOfficeThemes" Version="3.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
     <PackageReference Include="Umbraco.Cms" Version="10.3.1" />
   </ItemGroup>
 

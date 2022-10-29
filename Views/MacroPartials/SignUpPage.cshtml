@@ -15,14 +15,14 @@
         // Set the member type alias to use for the new member
         .WithMemberTypeAlias(Constants.Conventions.MemberTypes.DefaultAlias)
         // If null or not set, this will redirect to the current page
-        .WithRedirectUrl("/sign-in/")
+        .WithRedirectUrl("/patientportal/")
         // Set to true if you want the member editable properties shown.
         // It will only displays properties marked as "Member can edit" on the "Info" tab of the Member Type.
-        .WithCustomProperties(false)
+        .WithCustomProperties(true)
         .Build();
 
     var success = TempData["FormSuccess"] != null;
-    registerModel.RedirectUrl = "/sign-in/";
+    registerModel.RedirectUrl = "/patientportal/";
 }
     <link href="/css/MasterPage.css" rel="stylesheet"/>
     <link href="/css/SignUpPage.css" rel="stylesheet"/>

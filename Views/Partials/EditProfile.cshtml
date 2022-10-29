@@ -1,4 +1,4 @@
-﻿@inherits Umbraco.Cms.Web.Common.Macros.PartialViewMacroPage
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 
 @using Umbraco.Cms.Core.Services
 @using Umbraco.Cms.Web.Common.Security
@@ -14,7 +14,7 @@
     var profileModel = await memberModelBuilderFactory
         .CreateProfileModel()
         // If null or not set, this will redirect to the current page
-        .WithRedirectUrl("/profile/")
+        .WithRedirectUrl(null)
         // Include editable custom properties on the form
         .WithCustomProperties(true)
         .BuildForCurrentMemberAsync();
@@ -32,11 +32,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
-
-<link href="/css/MasterPage.css" rel="stylesheet"/>
-<link href="/css/SignUpPage.css" rel="stylesheet"/>
-<link href="/css/Style.css" rel="stylesheet">
-
 
 @if (profileModel != null)
 {
