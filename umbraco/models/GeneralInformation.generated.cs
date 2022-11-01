@@ -50,6 +50,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// GeneralInfoImageCropper
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.1+86fb24a")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("generalInfoImageCropper")]
+		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue GeneralInfoImageCropper => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue>(_publishedValueFallback, "generalInfoImageCropper");
+
+		///<summary>
 		/// Gen.Info Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.1+86fb24a")]

@@ -22,108 +22,186 @@
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
     </script>
     
-    <script>
-    
-        window.addEventListener('load', function () {
-            const element = document.getElementById("myBtn");
-            element.remove();
+   <script>
+     
+         window.addEventListener('load', function () {
+             const element = document.getElementById("myBtn");
+             element.remove();
+         })
+           window.addEventListener('load', function () {
+         
+  
+
+            let element = document.getElementById("profileButton");
+            let element1 = document.getElementById("welcome-user");
+            let hidden = element.getAttribute("hidden");
+            element.removeAttribute("hidden");
+            element1.removeAttribute("hidden");
+
         })
-        
-        function addRow() {
-            // get input values
-            var Subject = document.getElementById('Subject').value;
-            var Message = document.getElementById('Message').value;
-            
-            //Date and time 
-            var today = new Date();
-            var date = today.getDate() + '-'+(today.getMonth()+1 + '-'+today.getFullYear());
-
-            // get the html table
-            // 0 = the first table
-            var table = document.getElementsByTagName('table')[0];
-
-            // add new empty row to the table
-            // 1 = in the top 
-            // table.rows.length = the end
-            var newRow = table.insertRow(1);
-
-            // add cells to the row
-            var cel1 = newRow.insertCell(0);
-            var cel2 = newRow.insertCell(1);
-            var cel3 = newRow.insertCell(2);
-            var cel4 = newRow.insertCell(3);
-
-            // add values to the cells
-            cel1.innerHTML = Message;
-            cel2.innerHTML = Subject;
-            cel3.innerHTML = 'Shivam'; 
-            cel4.innerHTML = date; 
-            
-                     
-        }
-
-        function cleartext(){
-
-            //clear the text area
-            document.getElementById('Subject').value = '';        
-            document.getElementById('Message').value = '';        
-
-        }
-    </script>
+         
+         function addRow() {
+             // get input values
+             var Subject = document.getElementById('Subject').value;
+             var Message = document.getElementById('Message').value;
+ 
+             // get the html table
+             // 0 = the first table
+             var table = document.getElementsByTagName('table')[0];
+ 
+             // add new empty row to the table
+             // 1 = in the top 
+             // table.rows.length = the end
+             var newRow = table.insertRow(1);
+ 
+             // add cells to the row
+             var cel1 = newRow.insertCell(0);
+             var cel2 = newRow.insertCell(1);
+             var cel3 = newRow.insertCell(2);
+             var cel4 = newRow.insertCell(3);
+             var cel5 = newRow.insertCell(4);
+ 
+             // add values to the cells
+             cel1.innerHTML = Subject;
+             cel1.style.fontWeight = 'bold';
+             cel2.innerHTML = "Shivam";
+             cel3.innerHTML = "-";
+             cel4.innerHTML = "0";
+                      
+         }
+ 
+         function cleartext(){
+ 
+             //clear the text area
+             document.getElementById('Subject').value = '';        
+             document.getElementById('Message').value = '';        
+ 
+         }
+     </script>
+     
     
 </head> 
 
 <body>
     
-    <!--Main Body of the Forum-->
-    <div class = "main-forum-body"> 
-        <!--Padding container-->
-        <div class = "the-forum-class">
-            
-            <table class = "forum-header"> 
-                <!-- Forum Body--> 
+    <div class="container forum">
+        <h2 class = "forum-heading">Discussion Forum</h2>
+            <table class="table caption-top">
+                
+                <caption><button class="button-34" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsepost" aria-expanded="false" aria-controls="collapseExample"
+                        style=" float: right;">Create New Post</button>
+                </caption>
+                <div class="collapse" id="collapsepost">
+                    <div class="card" style="width: 38rem;">
+
+                        <div class="card card-body">
+
+                            Subject: <input type="text" name="Subject" id="Subject" /><br /><br />
+                            Message: <textarea type="text" rows="10" name="Message" id="Message" required minlength="10"
+                                maxlength="5000"></textarea><br /><br />
+                            <div class="row" style="padding: 1rem;">
+                                <button class="btn-post" onclick="addRow();cleartext();" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapsepost" aria-expanded="false"
+                                    aria-controls="collapseExample">Post to forum</button><br /><br />
+                             &nbsp;
+                         &nbsp;
+                            
+                                <button class="btn-cancel" onclick="cleartext();" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapsepost" aria-expanded="false"
+                                    aria-controls="collapseExample">Cancel</button><br /><br />
+                            </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
                 <thead>
                     <tr>
-                        <th scope = "col" style="max-width: 100vh;">Message</th>
-                        <th scope = "col" style="max-width: 50vh;">Topic</th>
-                        <th scope = "col" style="max-width: 25vh;">Posted By</th>
-                        <th scope = "col" style="max-width: 25vh;">Time</th>
+                        <th scope="col">Discussion</th>
+                        <th scope="col">Started by</th>
+                        <th scope="col">Last post</th>
+                        <th scope="col">Replies</th>
+                        <th scope="col">Reply</th>
                     </tr>
                 </thead>
-                <tbody class="forum-table">
+                <tbody class="table group-divider">
                     <tr>
-                        <th scope = "col" style="max-width: 100vh;">Lorem ipsum dolor sit amet</th>
-                        <td>Tips for healthy heart?</td>
+                        <th scope="row">Best exercises for your heart</th>
+                        <td>Shivam </td>
                         <td>Paul</td>
-                        <td>19-10-2022</td>
+                        <td>1</td>
+                        <td><a href="#" class="btn-reply" style = "text-decoration: underline">Reply</a></td>                    
+                    </tr>
+                    <tr>
+                        <th scope="row">Tips for healthy heart?</th>
+                        <td>Jan </td>
+                        <td>Paul</td>
+                        <td>2</td>
+                        <td><a href="#" class="btn-reply">Reply</a></td>                    
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Studying too much effects your heart?</th>
+                        <td>Paul </td>
+                        <td>Shivam</td>
+                        <td>5</td>
+                        <td><a href="#" class="btn-reply">Reply</a></td>                    
+
                     </tr>
                 </tbody>
-            </table>
-            
-            <!--Posting Section--> 
-            <table class="table caption-top">
-                <div class="card-card-body">
-            
-                    Subject <input type="text" name="Subject" id="Subject"/><br/><br/>
-                    Message <textarea type="text" rows="10" name="Message" id="Message" required minlength="10"
-                    maxlength="200"></textarea><br/><br/>
-                
-                    <div class="row" style="padding: 1rem;">
-                        <button class="btn-post" onclick="addRow();cleartext();" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapsepost" aria-expanded="false"
-                        aria-controls="collapseExample">Post to Forum</button><br /><br />
-                        &nbsp;
-                        &nbsp;
-                        
-                        <button class="btn-cancel" onclick="cleartext();" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsepost" aria-expanded="false"
-                        aria-controls="collapseExample">Cancel</button><br/><br/>
-                    </div>
-                </div>
-            </table>
-        </div>
-    </div>
 
-</body>
+            </table>
+    </div>
+ 
+ </body>
+  <!--Main Body of the Forum-->
+    <!--<div class = "main-forum-body"> -->
+        <!--Padding container-->
+    <!--    <div class = "the-forum-class">-->
+            
+    <!--        <table class = "forum-header"> -->
+                <!-- Forum Body--> 
+    <!--            <thead>-->
+    <!--                <tr>-->
+    <!--                    <th scope = "col" style="max-width: 100vh;">Message</th>-->
+    <!--                    <th scope = "col" style="max-width: 50vh;">Topic</th>-->
+    <!--                    <th scope = "col" style="max-width: 25vh;">Posted By</th>-->
+    <!--                    <th scope = "col" style="max-width: 25vh;">Time</th>-->
+    <!--                </tr>-->
+    <!--            </thead>-->
+    <!--            <tbody class="forum-table">-->
+    <!--                <tr>-->
+    <!--                    <th scope = "col" style="max-width: 100vh;">Lorem ipsum dolor sit amet</th>-->
+    <!--                    <td>Tips for healthy heart?</td>-->
+    <!--                    <td>Paul</td>-->
+    <!--                    <td>19-10-2022</td>-->
+    <!--                </tr>-->
+    <!--            </tbody>-->
+    <!--        </table>-->
+            
+  
+            <!--Posting Section--> 
+            <!--<table class="table caption-top">-->
+            <!--    <div class="card-card-body">-->
+            
+            <!--        Subject <input type="text" name="Subject" id="Subject"/><br/><br/>-->
+            <!--        Message <textarea type="text" rows="10" name="Message" id="Message" required minlength="10"-->
+            <!--        maxlength="200"></textarea><br/><br/>-->
+                
+            <!--        <div class="row" style="padding: 1rem;">-->
+            <!--            <button class="btn-post" onclick="addRow();cleartext();" type="button"-->
+            <!--            data-bs-toggle="collapse" data-bs-target="#collapsepost" aria-expanded="false"-->
+            <!--            aria-controls="collapseExample">Post to Forum</button><br /><br />-->
+            <!--            &nbsp;-->
+            <!--            &nbsp;-->
+                        
+            <!--            <button class="btn-cancel" onclick="cleartext();" type="button" data-bs-toggle="collapse"-->
+            <!--            data-bs-target="#collapsepost" aria-expanded="false"-->
+            <!--            aria-controls="collapseExample">Cancel</button><br/><br/>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</table>-->
+    
+
 
 </html>

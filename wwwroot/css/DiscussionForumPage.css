@@ -1,11 +1,12 @@
 
+
 /* Body */
-.main-forum-body { 
-    background-color: #d6d6d6;
-    min-height: 100vh;
-    padding: 10px;
-    
-} 
+ 
+h2.forum-heading{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
 /* Forum */
 .the-forum-class {
@@ -74,13 +75,16 @@ thead {
 }
 td, th {
   border: 1px solid black;
-  font-size: 15px;
-
+  font-size: large;
+    
 }
 
 .container{
     margin: auto;
-
+    
+}
+.container.forum{
+    min-height: 65vh;
 }
 
 button.btn-post{
@@ -118,3 +122,36 @@ button.btn-cancel{
     color: white;
     background-color: #c8102e;
 } 
+
+.btn-reply{
+     text-decoration: underline;
+     color: red;
+     text-align: center;
+    font-weight: bold
+}
+
+a {
+	transition: .3s all ease;
+	
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+
+	color: black;
+}
+
+
+.ftco-section{
+	padding: 7em 0;
+}
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+
+

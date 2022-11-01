@@ -1,4 +1,4 @@
-@model dynamic
+﻿@model dynamic
 @using Umbraco.Cms.Core.Media
 @using Umbraco.Cms.Core.PropertyEditors.ValueConverters
 @inject IImageUrlGenerator ImageUrlGenerator
@@ -23,7 +23,7 @@
                     {
                         new ImageCropperValue.ImageCropperCrop
                         {
-                            Alias = "default",
+                            Alias = "GeneralInfoImageCropper",
                             Coordinates = new ImageCropperValue.ImageCropperCropCoordinates
                             {
                                 X1 = (decimal)Model.value.coordinates.x1,

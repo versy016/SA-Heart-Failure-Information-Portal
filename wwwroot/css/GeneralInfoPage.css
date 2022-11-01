@@ -2,14 +2,15 @@
 /*Main Body*/
 .gen-body { 
     
-    min-height: 200vh;
+ 
     padding: 5px;
     margin: 5px;
     
-    background-color: #eceae9;
-    
-} 
 
+} 
+.p{
+    color: black;
+}
 /*1st Section*/
 .card-class-1 { 
     
