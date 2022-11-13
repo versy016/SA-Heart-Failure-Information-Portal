@@ -1,7 +1,7 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = "MasterPage.cshtml";
+    Layout = "MasterPage.cshtml";
 }
 
 <html lang="en">
@@ -9,14 +9,82 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
     <title>Heart Failure Information Portal</title>
-    
+        
     <!--CSS-->
     <link href="/css/MasterPage.css" rel="stylesheet" />
     <link href="/css/NurseRosterPage.css" rel="stylesheet" />
-    
-    
-</head> 
-<body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    #container { margin-left: auto; margin-right: auto; width: 1020px;}
+    </style>
+</head>
+<body>
 
-</body> 
+    <!--<div class="container forum">-->
+    <!--    <h2 class="forum-heading">Nursing Roster</h2>-->
+    <!--    <table class="table caption-top">-->
+
+    <!--        <thead>-->
+    <!--            <tr>-->
+    <!--                <th scope="col">Date</th>-->
+    <!--                <th scope="col">Time</th>-->
+    <!--                <th scope="col">Nurse</th>-->
+    <!--                <th scope="col">Gender</th>-->
+
+    <!--            </tr>-->
+    <!--        </thead>-->
+    <!--        <tbody class="table group-divider">-->
+    <!--            <tr>-->
+    <!--                <th scope="row">Best exercises for your heart</th>-->
+    <!--                <td>Shivam </td>-->
+    <!--                <td>Paul</td>-->
+    <!--                <td>1</td>-->
+    <!--                <td><a href="#" class="btn-reply" style="text-decoration: underline">Reply</a></td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <th scope="row">Tips for healthy heart?</th>-->
+    <!--                <td>Jan </td>-->
+    <!--                <td>Paul</td>-->
+    <!--                <td>2</td>-->
+    <!--                <td><a href="#" class="btn-reply">Reply</a></td>-->
+
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <th scope="row">Studying too much effects your heart?</th>-->
+    <!--                <td>Paul </td>-->
+    <!--                <td>Shivam</td>-->
+    <!--                <td>5</td>-->
+    <!--                <td><a href="#" class="btn-reply">Reply</a></td>-->
+
+    <!--            </tr>-->
+    <!--        </tbody>-->
+
+    <!--    </table>-->
+    <!--</div>-->
+    
+   
+   
+    <h1 align="center" style="margin-top:150px; margin-bottom:100px;">Nurse Roster</h1>
+    <div id="container" class ="container-nurse">
+    </div>
+</body>	
+ <script>
+    $.get('https://localhost:44363/media/qopm0vc0/nurseroster.csv', function(data) {
+        var html = '<table class="table table-bordered">';
+        var rows = data.split("\n");
+        rows.forEach( function getvalues(ourrow) {
+            html += "<tr>";
+            var columns = ourrow.split(",");
+            html += "<td>" + columns[0] + "</td>";
+            html += "<td>" + columns[1] + "</td>";
+            html += "<td>" + columns[2] + "</td>";
+            html += "<td>" + columns[3] + "</td>";
+            html += "<td>" + columns[4] + "</td>";
+            html += "<td>" + columns[5] + "</td>";
+            html += "<td>" + columns[6] + "</td>";
+        })
+        html += "</table>";
+        $('#container').append(html);
+    });
+    </script>
 </html>
