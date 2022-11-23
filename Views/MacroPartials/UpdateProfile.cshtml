@@ -60,6 +60,8 @@
             <label asp-for="@profileModel.Email" class="form-label"></label>
             <input asp-for="@profileModel.Email" class="form-control" autocomplete="username" aria-required="true" />
             <span asp-validation-for="@profileModel.Email" class="form-text text-danger"></span>
+            <!--Reset Password--> 
+                    <a href="/change-password/">Reset Password</a><br><br> 
         </div>
 
         @if (!string.IsNullOrWhiteSpace(profileModel.UserName))

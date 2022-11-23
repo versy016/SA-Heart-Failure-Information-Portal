@@ -45,7 +45,8 @@
            
                 <a class="btn-skin-1 signin-button" id = "myBtn" type="button" target="_blank" href="/log-in/">Sign In</a>
                 
-                <a id = "welcome-user" style="color: white" hidden > Welcome Shivam!</a>
+                <a id = "welcome-user" style="color: white" hidden >@await Umbraco.RenderMacroAsync("LogoutPage")
+</a>
                 &nbsp; 
                 <li class ="has-children">
                     <button class="btn-skin-1 btn-circle" id = "profileButton" type="button" hidden>

@@ -15,7 +15,25 @@
     <link href="/css/NearbyServicesPage.css" rel="stylesheet" />
     
 </head> 
-<body> 
+ <script> 
+        window.addEventListener('load', function () {
+            const element = document.getElementById("myBtn");
+            element.remove();
+        })
+        
+        window.addEventListener('load', function () {
+         
+  
 
+            let element = document.getElementById("profileButton");
+            let element1 = document.getElementById("welcome-user");
+            let hidden = element.getAttribute("hidden");
+            element.removeAttribute("hidden");
+            element1.removeAttribute("hidden");
+
+        })
+    </script>
+<body> 
+@Html.GetGridHtml(Model,"servicesEditor","bootstrap3")
 </body> 
 </html>
