@@ -19,49 +19,6 @@
     </style>
 </head>
 <body>
-
-    <!--<div class="container forum">-->
-    <!--    <h2 class="forum-heading">Nursing Roster</h2>-->
-    <!--    <table class="table caption-top">-->
-
-    <!--        <thead>-->
-    <!--            <tr>-->
-    <!--                <th scope="col">Date</th>-->
-    <!--                <th scope="col">Time</th>-->
-    <!--                <th scope="col">Nurse</th>-->
-    <!--                <th scope="col">Gender</th>-->
-
-    <!--            </tr>-->
-    <!--        </thead>-->
-    <!--        <tbody class="table group-divider">-->
-    <!--            <tr>-->
-    <!--                <th scope="row">Best exercises for your heart</th>-->
-    <!--                <td>Shivam </td>-->
-    <!--                <td>Paul</td>-->
-    <!--                <td>1</td>-->
-    <!--                <td><a href="#" class="btn-reply" style="text-decoration: underline">Reply</a></td>-->
-    <!--            </tr>-->
-    <!--            <tr>-->
-    <!--                <th scope="row">Tips for healthy heart?</th>-->
-    <!--                <td>Jan </td>-->
-    <!--                <td>Paul</td>-->
-    <!--                <td>2</td>-->
-    <!--                <td><a href="#" class="btn-reply">Reply</a></td>-->
-
-    <!--            </tr>-->
-    <!--            <tr>-->
-    <!--                <th scope="row">Studying too much effects your heart?</th>-->
-    <!--                <td>Paul </td>-->
-    <!--                <td>Shivam</td>-->
-    <!--                <td>5</td>-->
-    <!--                <td><a href="#" class="btn-reply">Reply</a></td>-->
-
-    <!--            </tr>-->
-    <!--        </tbody>-->
-
-    <!--    </table>-->
-    <!--</div>-->
-    
    
    
     <h1 align="center" style="margin-top:150px; margin-bottom:100px;">Nurse Roster</h1>
@@ -69,7 +26,7 @@
     </div>
 </body>	
  <script>
-    $.get('https://localhost:44363/media/qopm0vc0/nurseroster.csv', function(data) {
+    $.get('https://localhost:44363/media/iuzhbss3/nurseroster.csv', function(data) {
         var html = '<table class="table table-bordered">';
         var rows = data.split("\n");
         rows.forEach( function getvalues(ourrow) {
