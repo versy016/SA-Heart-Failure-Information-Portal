@@ -1,4 +1,17 @@
 .container-nurse{
         height: 90vh;
-        
+} 
+
+.table table-bordered { 
+    border: black;
+} 
+
+tr { 
+    border: black 2px solid; 
+    
+} 
+
+td { 
+    text-align: center;
+    font-weight: bold;
 } 
