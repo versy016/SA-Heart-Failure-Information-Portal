@@ -12,27 +12,12 @@
 /* 2nd-Main body */
 .second-main-card { 
     min-height: 50vh;
-    margin: 5px;
-    margin-top: 5px;
+    margin: 5px; 
     padding: 5px;
     
     /* Flex */
     display: flex;
     flex-direction: row; 
-    
-} 
-
-/* 3rd-Main body */
-.third-main-card { 
-    min-height: 50vh;
-    margin: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    
-    /* Flex */
-    display: flex;
-    flex-direction: row; 
-    
 } 
 
  /* Members Cards */
@@ -61,6 +46,59 @@
     background-color: #989c99;
 } 
 
+/* Add Member */
+.add-member { 
+    margin: 30px; 
+    padding: 20px; 
+    height: 65vh;
+    border: 1px solid #5e615f;
+    border-radius: 25px;
+    position: relative;
+    
+} 
+
+.addBtn{ 
+    color: #fff;
+    background-color: #c8102e;
+    border-color: #c8102e;
+    padding: 4px 16px;
+    padding-top: 4px;
+    line-height: 1;
+    border-radius: 64px;
+    border-style: solid;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 5px;
+    font-size: 18px;
+    
+    /*Positioning*/
+    position: absolute;
+    top: 90%;
+    margin-left: 45%;
+    margin-bottom: 5px
+    
+} 
+
+/*Text Input Fields*/
+.input-row { 
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+} 
+
+.input-row .input-group { 
+  flex-basis: 20%;
+  outline: none;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 2px;
+}
 
 /* Image & Fonts */
 
@@ -110,4 +148,21 @@ img {
     line-height: normal;
     font-size: 15px;
     display: block;
+} 
+
+.description { 
+    flex-basis: 20%;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 150px;
+    
+} 
+
+.contact-container { 
+    
+    height: 100vh;
+    margin: 30px;
+    padding: 20px;
+    
 } 

@@ -11,6 +11,33 @@
     <link rel="stylesheet" href="/css/Style.css"/>
     <link href="/css/MasterPage.css" rel="stylesheet"/>
     <link href="/css/MembersPage.css" rel="stylesheet"/>
+    
+    <!--JavaScript--> 
+    <script>
+    
+      // Add a div
+      window.onload = function(){
+        const addBtn = document.querySelector(".addBtn");
+        const divContainer = document.getElementById("first-main-card");
+        addBtn.addEventListener("click", createDiv);
+
+      }   
+      
+      //Function adds a div to the page with the content filled in
+      function createDiv() {
+        const newDiv = document.createElement("div"); 
+        console.log("Add");
+        newDiv.classList.add("member-card"); 
+        divContainer.appendChild(newDiv); 
+      } 
+        
+      function uploadImage() {
+        var fileInput = document.getElementById('fileInput');
+        var file = fileInput.files[0];
+    
+        //Append to div
+      }
+    </script>
    
   </head>
   <body>
@@ -18,87 +45,64 @@
       <h1 class = "heading-title"> Our Team</h1>
       @Model.Value("profileTexteditor")
 
-      <!--1st Row of Members-->
-      <div class = "first-main-card">
+      <!--Row of Members-->
+      <div class = "first-main-card" id="first-main-card">
           <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
+                <img src ="/media/1wkkz240/p1.jpg" alt = "portrait"> 
+                <h4 class = "title">Dr. Rachel Kingston</h4>
+                <h6 class = "subtitle">Heart Failure Specialist</h6>
+                <p1 class = "info-text"> I'm a clinical and interventional cardiologist as well as a clinical trialist and outcomes researcher in health systems research for the Heart Failure Subcommittee</p1>
            </div>
            <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
+                <img src ="/media/ip3mjst5/p2.jpg" alt = "portrait"> 
+                <h4 class = "title">Dr. Ern Peck</h4>
+                <h6 class = "subtitle">Executive Director of Research</h6>
+                <p1 class = "info-text">I've been with the Heart Failure CEIH for over 20 years, and I am head of all research by the Subcommittee</p1>
            </div>
            <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
+                <img src ="/media/fh5d4j2h/p3.jpg" alt = "portrait"> 
+                <h4 class = "title">Dr. Delaney Pinkham </h4>
+                <h6 class = "subtitle">BMBS Cardivascular Care</h6>
+                <p1 class = "info-text">I'm a Senior Staff Specialist located at Southern Adelaide Palliative Services</p1>
            </div>
             <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
+                <img src ="/media/lcqfseis/p4.jpg" alt = "portrait"> 
+                <h4 class = "title">Dr. Jessica Reavely </h4>
+                <h6 class = "subtitle">MBBS BSc (Hons) MRCS (Ed) </h6>
+                <p1 class = "info-text">Senior Heart Specialist within Central Adelaide Local Health Network and the Statewide Virtual Care Service</p1>
            </div>
-      </div> 
-      <!--2nd Row of Members-->
-      <div class = "second-main-card">
-         <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-           <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-           <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-            <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-      </div> 
-      <!--3rd Row of Members-->
-      <div class = "third-main-card">
-          <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-           <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-           <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-            <div class = "member-card"> 
-                <img src ="/media/drglpbnd/defaultpic.jpg" alt = "portrait"> 
-                <h4 class = "title">Dr Steve Smith</h4>
-                <h6 class = "subtitle">Director of X</h6>
-                <p1 class = "info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p1>
-           </div>
-      </div> 
+      </div>
+      
+      <div class ="add-member">
+          
+          <!--Input Field-->
+          <form action="">
+                <div class = "input-row"> 
+                    <div class = "input-group"> 
+                        <label>Prefix</label>
+                        <input type = "text" placeholder = "Dr." id="prefix">
+                    </div>
+                    <div class = "input-group"> 
+                        <label>Name</label>
+                        <input type = "text" placeholder = "Steve Smith">
+                    </div>
+                    <div class = "input-group"> 
+                        <label>Title</label>
+                        <input type = "text" placeholder = "Heart Failure Specalist">
+                    </div>
+                    </div>
+                    
+                    <label>Message</label><br>
+                    <textarea cols = "15" placeholder = "Description" class ="description"></textarea><br><br> 
+                    
+                    <!--Upload an image--> 
+                    <input type="file" id="fileInput" accept="image/*" onchange="uploadImage()"><br> 
+                    
+                    <!--Add Member Button--> 
+                    <button id="addBtn" class="addBtn" onclick="createDiv()">Add Member</button>
+          </form>
+      </div>
+      
       
   </body>
 </html>
