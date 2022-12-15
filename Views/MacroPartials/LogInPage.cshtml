@@ -53,8 +53,7 @@ else
     
         @using (Html.BeginUmbracoForm<UmbLoginController>(
             "HandleLogin", new { RedirectUrl = loginModel.RedirectUrl })) {
-            <div class ="container-signup">
-                
+            <div class ="container-signup"> 
                 <h2 class="h2-login">Login</h2>
                 <hr />
                 
@@ -85,10 +84,25 @@ else
                 
                 <!--Links to the sign up page--> 
                 <button type="sign-up" class="button-signup"><a href = "/sign-up/" class="logintext">Sign Up</a></button>
-                <button type="sign-up" class="button-admin"><a href = "https://localhost:44363/umbraco" class="logintext">Admin</a></button>
-    
-            </div>
-            }
+                <button type="sign-up" class="button-admin"><a href = "https://localhost:44363/umbraco" class="logintext">Admin</a></button><br> 
+                
+                <!-- Drop Down Menu --> 
+                <select class = "Reg-Option">
+                  <option value="Op1-Member">Member</option>
+                  <option value="Op2-Clinician">Clinician</option>
+                  <option value="Op3-Committee">Committee</option>
+                </select>
+                
+                <!-- Help -->
+                <div class = "Tool-Tip-Help">
+                    <p style="color:black"><b>Help</b></p>
+                    <p style="color:black"><b>Member </b>A patient who suffer from cardiovascular health issues, and require accesses to additional services and resources</p>
+                    <p style="color:black"><b>Clinician </b>A heterogeneous medical professional and academics, spanning from doctors, GP’s heart specialists, nurses, etc who are either practising or non-practising</p>
+                    <p style="color:black"><b>Committee </b>Active members of the SA CEIH HF subcommittee who comprise of health care professionals, and medical academics who specialise in theory rather than treatment and are a part of the CEIH</p> 
+                </div>
+
+            </div> 
+        }
     @{
         var loginProviders = await memberExternalLoginProviders.GetMemberProvidersAsync();
         var externalSignInError = ViewData.GetExternalSignInProviderErrors();

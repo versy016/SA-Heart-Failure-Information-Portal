@@ -111,3 +111,28 @@ div.login-form{
 .form-check-input-remember{
     margin-left: auto;
 }
+
+/* Drop Down Option*/
+.Reg-Option { 
+    margin-top: 10px;
+    margin-left: 35%;
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px; 
+    padding: 5px; 
+    outline:none;
+    color: white;
+    background-color:#c8102e;
+    text-align: center;
+    
+} 
+
+/* Definition Help Section*/ 
+.Tool-Tip-Help {
+    margin-top: 10px;
+    color: black !important;
+    font-size: 14px; 
+}
+
