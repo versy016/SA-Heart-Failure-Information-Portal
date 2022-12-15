@@ -25,6 +25,43 @@
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/Style.css" rel="stylesheet">
 
+<!--JS-->
+<script>
+    
+    //Registration Conditional Statement
+    function regOption() { 
+       //Opens the window corresponding to the drop down option
+        var dropdown = document.getElementById("Reg-Option");
+        var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+        
+        if (selectedValue == "1") {
+          window.open("/sign-up/");
+        } else if (selectedValue == "2") {
+          window.open("");
+        } else if (selectedValue == "3") {
+          window.open("");
+        } 
+    } 
+    
+    //Clinican Page or Patient Page
+    function pageOption() { 
+       //Opens the window corresponding to the drop down option
+        var dropdown = document.getElementById("Reg-Option");
+        var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+        
+        if (selectedValue == "1") {
+          window.open("/patientportal/");
+        } else if (selectedValue == "2") {
+          window.open("/clinicianportal/");
+        } else if (selectedValue == "3") {
+          window.open("/clinicianportal/");
+        } 
+    } 
+    
+    
+</script>
+
+
 @if (ViewData.TryGetTwoFactorProviderNames(out var providerNames))
 {
 
@@ -80,18 +117,19 @@ else
                 </div>
                 
                 <!--Log in page--> 
-                <button type="submit" class="button-login"><a href = "/patientportal/" class="logintext">Log in</a></button>
+                <button type="submit" class="button-login" onclick="pageOption()">Log in</button>
                 
                 <!--Links to the sign up page--> 
-                <button type="sign-up" class="button-signup"><a href = "/sign-up/" class="logintext">Sign Up</a></button>
-                <button type="sign-up" class="button-admin"><a href = "https://localhost:44363/umbraco" class="logintext">Admin</a></button><br> 
                 
                 <!-- Drop Down Menu --> 
-                <select class = "Reg-Option">
-                  <option value="Op1-Member">Member</option>
-                  <option value="Op2-Clinician">Clinician</option>
-                  <option value="Op3-Committee">Committee</option>
+                <select class = "Reg-Option" id="Reg-Option">
+                  <option value="1">Member</option>
+                  <option value="2">Clinician</option>
+                  <option value="3">Committee</option>
                 </select>
+                
+                <button type="sign-up" class="button-admin"><a href = "https://localhost:44363/umbraco" class="logintext">Admin</a></button>
+                <button type="sign-up" class="button-signup" onclick="regOption()">Sign Up</button><br> 
                 
                 <!-- Help -->
                 <div class = "Tool-Tip-Help">
