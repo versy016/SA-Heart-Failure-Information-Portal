@@ -2,7 +2,7 @@
 body {
   /* display: flex; */
   flex-wrap: nowrap;
-  height: 200vh;
+  min-height: 100%;
   height: -webkit-fill-available;
   
 }
