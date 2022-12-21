@@ -56,7 +56,7 @@ else
     {
     
     <div class="container-signup">
-        <h2 class="signup-h2">Create a new account</h2>
+        <h2 class="signup-h2">Create a New Account</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@registerModel.Name" class="form-label"></label>
@@ -77,6 +77,11 @@ else
             <label asp-for="@registerModel.ConfirmPassword" class="form-label"></label>
             <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
             <span asp-validation-for="@registerModel.ConfirmPassword" class="form-text text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@registerModel.SecurityQuestion" class="form-label"></label>
+            <input asp-for="@registerModel.SecurityQuestion" class="form-control" autocomplete="new-password" aria-required="true" />
+            <span asp-validation-for="@registerModel.SecurityQuestion" class="form-text text-danger"></span>
         </div>
 
         @if (registerModel.MemberProperties != null)

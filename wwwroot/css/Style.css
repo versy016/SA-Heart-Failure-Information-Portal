@@ -370,6 +370,7 @@ a {
         
 .footer-32892 {
   background-color: #202126;
+  padding-bottom: 0 !important; 
   padding: 2rem 0;
   color: #888;
   font-size: 16px; }
