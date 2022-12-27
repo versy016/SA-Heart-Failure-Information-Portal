@@ -78,11 +78,6 @@ else
             <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
             <span asp-validation-for="@registerModel.ConfirmPassword" class="form-text text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="@registerModel.SecurityQuestion" class="form-label"></label>
-            <input asp-for="@registerModel.SecurityQuestion" class="form-control" autocomplete="new-password" aria-required="true" />
-            <span asp-validation-for="@registerModel.SecurityQuestion" class="form-text text-danger"></span>
-        </div>
 
         @if (registerModel.MemberProperties != null)
         {

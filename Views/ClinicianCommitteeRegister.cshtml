@@ -4,5 +4,60 @@
 	Layout = "MasterPage.cshtml";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+    <title>Heart Failure Information Portal</title>
+    
+    <link href="/css/MasterPage.css" rel="stylesheet" />
+    <link href="/css/ClinicianCommitteeRegister.css" rel="stylesheet" />
+    
+    <!--Script--> 
+    <script src="./Scripts/ClinicianCommitteeRegister.js"></script>
+    
+    
+ </head>
+ <body>
+    
+    <div class = "main-reg-body"> 
+        <form class = "reg-body"> 
+            <h1 class = "main-title"> Clinician & Committee Registration</h1>
+            
+            <!--Detail input for the user--> 
+            <div class = "input-input-group"> 
+                <input type = "text" class = "prefix-input-form" id="prefix" placeholder = "Dr."> 
+                <input type = "text" class = "fullname-input-form" id="name" placeholder = "Steve Smith"> 
+                <input type = "text" class = "qualification-input-form" id="qualification" placeholder = "Professional Qualification"> 
+                <input type = "text" class = "address-input-form" id="address" placeholder = "Professional Address"> 
+                <input type = "number" class = "phone-input-form" id="phone" placeholder = "0411 111 111"> 
+                <input type = "email" class = "email-input-form" id="email" placeholder = "abc@email.com"> 
+                
+                <!--Password Validation--> 
+                <input type = "password" class = "password-input-form" id="password" placeholder = "Password"> 
+                <input type = "password" class = "repassword-input-form" id="repassword" placeholder = "Re-Enter Password"> 
+                <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> 
+                <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> 
+                
+                <!--Back to login--> 
+                <p class="login">
+                    <a class="login" href="/log-in/" id="login">Already have an account? Log-in here</a>
+                </p>
+                
+            </div>
+        
+        </form>
+    
+    
+    </div>
+    
+    
+    
+    
+</body>
+</html>
+
+
     
     
