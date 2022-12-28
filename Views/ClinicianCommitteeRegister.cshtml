@@ -4,7 +4,8 @@
 	Layout = "MasterPage.cshtml";
 }
 
-<<<<<<< HEAD
+@Model.Value("cliniciansandCommitteeSignUp")
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,19 +28,40 @@
             <h1 class = "main-title"> Clinician & Committee Registration</h1>
             
             <!--Detail input for the user--> 
-            <div class = "input-input-group"> 
-                <input type = "text" class = "prefix-input-form" id="prefix" placeholder = "Dr."> 
-                <input type = "text" class = "fullname-input-form" id="name" placeholder = "Steve Smith"> 
-                <input type = "text" class = "qualification-input-form" id="qualification" placeholder = "Professional Qualification"> 
-                <input type = "text" class = "address-input-form" id="address" placeholder = "Professional Address"> 
-                <input type = "number" class = "phone-input-form" id="phone" placeholder = "0411 111 111"> 
-                <input type = "email" class = "email-input-form" id="email" placeholder = "abc@email.com"> 
+            <div class = "input-input-group">
+                <label>Prefix</label><br> 
+                <input type = "text" class = "prefix-input-form" id="prefix" placeholder = "Dr."><br>
+                <label>Full Name</label><br> 
+                <input type = "text" class = "fullname-input-form" id="name" placeholder = "Steve Smith"><br>
+                <label>Professional Qualification</label><br> 
+                <input type = "text" class = "qualification-input-form" id="qualification" placeholder = "Professional Qualification"><br> 
+                <label>Professional Work Address</label><br>
+                <input type = "text" class = "address-input-form" id="address" placeholder = "Professional Address"><br>
+                <label>Number</label><br> 
+                <input type = "text" class = "phone-input-form" id="phone" placeholder = "0411 111 111"><br>
+                <label>Email Address</label><br> 
+                <input type = "email" class = "email-input-form" id="email" placeholder = "abc@email.com"><br>
                 
                 <!--Password Validation--> 
-                <input type = "password" class = "password-input-form" id="password" placeholder = "Password"> 
-                <input type = "password" class = "repassword-input-form" id="repassword" placeholder = "Re-Enter Password"> 
-                <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> 
-                <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> 
+                <label>Enter Your Password</label><br> 
+                <input type = "password" class = "password-input-form" id="password" placeholder = "Password"> <br>  
+                <label>Re-Enter Your Password</label><br> 
+                <input type = "password" class = "repassword-input-form" id="repassword" placeholder = "Re-Enter Password"> <br><br>
+                
+                <!--Security Question--> 
+                <select class = "securityOption">
+                    <option value="Op1">What was the name of your first pet?</option>
+                    <option value="Op2">What is your mother's maiden name?</option>
+                    <option value="Op3">In what city were you born?</option>
+                </select> <br>
+                
+                <label>Enter Your Security Question Answer</label><br> 
+                <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> <br>
+                <label>Re-Enter Your Security Question Answer</label><br>
+                <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br><br>
+                
+                <!--Button--> 
+                <button class="RegButton" type="submit" id="RegButton">Register</button>
                 
                 <!--Back to login--> 
                 <p class="login">
@@ -47,10 +69,7 @@
                 </p>
                 
             </div>
-        
         </form>
-    
-    
     </div>
     
     
@@ -58,10 +77,4 @@
     
 </body>
 </html>
-
-
-    
-=======
-@Model.Value("cliniciansandCommitteeSignUp")
->>>>>>> a430a49ec0385205400591c991ba61c8f8490cdf
     

@@ -1,6 +1,96 @@
 .main-reg-body {
-    
-    height: 100vh;
+    height: 150vh;
     min-height: 100%; 
     
 }
+
+.reg-body { 
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+} 
+
+.input-input-group { 
+    margin: 10px;
+    padding: 5px; 
+    justify-content: center;
+    
+    border-style: solid;
+    
+} 
+
+
+.main-title { 
+    text-align: center;
+        
+} 
+
+/*Input Tags*/
+.security-input-form  { 
+  width: 300px;  
+} 
+
+.prefix-input-form { 
+  width: 300px;  
+} 
+
+.fullname-input-form { 
+    width: 300px;
+} 
+
+.qualification-input-form { 
+    width: 300px;
+} 
+
+.address-input-form { 
+    width: 300px;
+} 
+
+.phone-input-form { 
+    width: 300px;
+} 
+
+.email-input-form { 
+    width: 300px;
+} 
+
+.password-input-form { 
+    width: 300px;
+} 
+
+.repassword-input-form {
+    width: 300px;
+} 
+
+
+.security-input-form { 
+    width: 300px;
+} 
+
+.resecurity-input-form { 
+    width: 300px;
+} 
+
+
+/*Drop Down Menu*/
+.securityOption { 
+    width: 200px;
+} 
+
+/*Button*/
+.RegButton { 
+    color: #fff;
+    background-color: #c8102e;
+    border-color: #c8102e;
+    padding: 4px 16px;
+    padding-top: 4px;
+    line-height: 1;
+    border-radius: 64px;
+    border-style: solid;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 5px;
+    font-size: 18px;
+    
+} 
