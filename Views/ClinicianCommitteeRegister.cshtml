@@ -40,7 +40,7 @@
                 <label>Number</label><br> 
                 <input type = "text" class = "phone-input-form" id="phone" placeholder = "0411 111 111"><br>
                 <label>Email Address</label><br> 
-                <input type = "email" class = "email-input-form" id="email" placeholder = "abc@email.com"><br>
+                <input type = "email" class = "email-input-form" id="email" placeholder = "abc@email.com"><br><br> 
                 
                 <!--Password Validation--> 
                 <label>Enter Your Password</label><br> 
@@ -53,15 +53,25 @@
                     <option value="Op1">What was the name of your first pet?</option>
                     <option value="Op2">What is your mother's maiden name?</option>
                     <option value="Op3">In what city were you born?</option>
-                </select> <br>
+                </select> <br><br> 
                 
                 <label>Enter Your Security Question Answer</label><br> 
                 <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> <br>
                 <label>Re-Enter Your Security Question Answer</label><br>
-                <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br><br>
+                <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br> 
                 
-                <!--Button--> 
-                <button class="RegButton" type="submit" id="RegButton">Register</button>
+                <form> 
+                    <input type="checkbox" id="clinican" name="member" class="member" value="Clinician">
+                    <label for="member">Clinician</label>
+                    <input type="checkbox" id="clinican" name="committee" class="committee" value="Committee Member">
+                    <label for="committee">Committee Member</label><br><br> 
+                </form>
+                
+                
+                <!--Button-->
+                <form action="/log-in/">
+                    <button class="RegButton" type="submit" id="RegButton">Register</button>
+                </form><br>
                 
                 <!--Back to login--> 
                 <p class="login">

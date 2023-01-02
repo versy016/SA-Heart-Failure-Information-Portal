@@ -1,80 +1,212 @@
 .main-reg-body {
-    height: 150vh;
+    height: 220vh;
     min-height: 100%; 
     
 }
 
 .reg-body { 
-    margin: 10px;
-    padding: 10px;
-    border-style: solid;
+    margin: 5px;
+    padding: 5px;
 } 
+
 
 .input-input-group { 
-    margin: 10px;
-    padding: 5px; 
-    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 30%;
     
-    border-style: solid;
+    width: 600px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(230, 181, 181, 0.15);
+
     
 } 
-
 
 .main-title { 
     text-align: center;
         
 } 
 
+.label { 
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    
+} 
+
 /*Input Tags*/
 .security-input-form  { 
-  width: 300px;  
+  width: 300px;
 } 
 
 .prefix-input-form { 
-  width: 300px;  
+  width: 500px;  
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  
 } 
 
 .fullname-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .qualification-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .address-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .phone-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .email-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .password-input-form { 
-    width: 300px;
+      width: 500px;  
+      display: block;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .repassword-input-form {
-    width: 300px;
+    width: 500px;  
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 
 .security-input-form { 
-    width: 300px;
+    width: 500px;  
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 .resecurity-input-form { 
-    width: 300px;
+    width: 500px;  
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 } 
 
 
 /*Drop Down Menu*/
 .securityOption { 
-    width: 200px;
+    width: 500px;
+    height: 35px;
 } 
 
 /*Button*/
@@ -85,12 +217,27 @@
     padding: 4px 16px;
     padding-top: 4px;
     line-height: 1;
-    border-radius: 64px;
+    border-radius: 10px;
     border-style: solid;
     transition: background 0.1s ease-in-out;
     cursor: pointer;
     font-weight: 700;
     padding-top: 5px;
     font-size: 18px;
+    width: 150px;
+    height: 35px;
+    margin-left: 35%;
     
+} 
+
+.committee { 
+    margin-left: 100px;
+} 
+
+.member { 
+    margin-left: 100px;
+} 
+
+.login { 
+    margin-left: 12%;
 } 
