@@ -17,14 +17,66 @@
     <link href="/css/ClinicianCommitteeRegister.css" rel="stylesheet" />
     
     <!--Script--> 
-    <script src="./Scripts/ClinicianCommitteeRegister.js"></script>
+    <script> 
+        
+        //User Objet 
+        let UserGroup = [];
+        
+        const createUser = (ev) => { 
+            //Prevents the browser from reloading 
+            ev.preventDefault(); 
+            
+            if (document.getElementById('password').value != document.getElementById('repassword').value ) { 
+                alert("Passwords Don't Match"); 
+                return false; 
+            } 
+            
+            if (document.getElementById('security').value != document.getElementById('resecurity').value ) { 
+                alert("Securtity Answers Don't Match"); 
+                return false; 
+            } 
+            
+                
+            //Creates a User Object 
+            let user = {
+                prefix = document.getElementById('prefix').value,
+                name = document.getElementById('name').value,
+                qualification = document.getElementById('qualification').value,
+                address = document.getElementById('address').value,
+                phone = document.getElementById('phone').value,
+                email = document.getElementById('email').value,
+                password = document.getElementById('password').value,
+                security = document.getElementById('security').value,
+                member = document.getElementById('member').value,
+                committee = document.getElementById('committee').value,
+                
+            }
+            
+            //Add to the array
+            UserGroup.push(user); 
+            
+            const csvData = json2csv.parse(); 
+            
+            //Clears the query 
+            document.forms[0].reset(); 
+            
+            localStorage.setItem('UserGroupList', JSON.stringify(UserGroup))
+        } 
+        
+        
+        //Register Button Action 
+        document.addEventListener('DOMContentLoaded', () =>{
+            document.getElementById('RegButton').addEventListener('click', createUser)
+        }); 
+    
+    </script>
     
     
  </head>
  <body>
     
     <div class = "main-reg-body"> 
-        <form class = "reg-body"> 
+        <form class = "reg-body" > 
             <h1 class = "main-title"> Clinician & Committee Registration</h1>
             
             <!--Detail input for the user--> 
@@ -61,9 +113,9 @@
                 <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br> 
                 
                 <form> 
-                    <input type="checkbox" id="clinican" name="member" class="member" value="Clinician">
+                    <input type="checkbox" id="clinican" name="member" class="member" id="member" value="Clinician">
                     <label for="member">Clinician</label>
-                    <input type="checkbox" id="clinican" name="committee" class="committee" value="Committee Member">
+                    <input type="checkbox" id="clinican" name="committee" class="committee" id="committee" value="Committee Member">
                     <label for="committee">Committee Member</label><br><br> 
                 </form>
                 
@@ -75,7 +127,7 @@
                 
                 <!--Back to login--> 
                 <p class="login">
-                    <a class="login" href="/log-in/" id="login">Already have an account? Log-in here</a>
+                    <a class="login" href="#" id="login">Already have an account? Log-in here</a>
                 </p>
                 
             </div>
