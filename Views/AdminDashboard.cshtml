@@ -13,12 +13,60 @@
     <link href="/css/MasterPage.css" rel="stylesheet" />
     <link href="/css/AdminDashboardPage.css" rel="stylesheet" />
     
+    <!--Script--> 
+    <script> 
+        
+        //Deletes the row from the table
+        var index, table = document.getElementById('table');
+        for (var i = 1; i < table.rows.length; i++) {
+            
+            table.rows[i].cells[6].onclick = function (){ 
+                
+                index = this.parentElement.rowIndex; 
+                table.deleteRow(index); 
+                console.log(index); 
+                
+            }; 
+            
+            
+        }
+        
+    </script>
+    
     
  </head>
  <body>
     
+    <div class = "main-body"> 
+        
+        <table class = "main-table" id="table"> 
+            <tr class = "main-table-header"> 
+                <th>ID</th>
+                <th>Prefix/Title</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Member Type</th>
+                
+                <th>Delete</th>
+                <th>Access</th>
+            </tr>
+            <tr class = "user-table-row"> 
+                <td>1</td>
+                <td>Dr.</td>
+                <td>Paul Vozzo</td>
+                <td>Vozpa001@mymail.unisa.edu.au</td>
+                <td>0412 345 678</td>
+                <td>Committee</td>
+                
+                <td>Remove</td>
+                <td><input type="checkbox" id="Grant" name="Grant" value="Grant"></td>
+            </tr>
+        </table>
+        
+        <button type = "submit" id = "saveBtn" class = "saveBtn">Save</button>
     
-    
+    </div>
     
     
 </body>
