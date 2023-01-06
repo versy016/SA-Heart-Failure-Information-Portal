@@ -1,9 +1,11 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@model HFportal.Views.ClinicianCommitteeRegisterModel
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = "MasterPage.cshtml";
+    Layout = "MasterPage.cshtml";
 }
 
+@Model.Value("HFportal.Views.ClinicianCommitteeRegisterModel")
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +83,7 @@
             <!--Detail input for the user--> 
             <div class = "input-input-group">
                 <label>Prefix</label><br> 
-                <input type = "text" class = "prefix-input-form" id="prefix" placeholder = "Dr."><br>
+                <input type="text" class="prefix-input-form" id="prefix" placeholder="Dr." value="@Model..name"><br>
                 <label>Full Name</label><br> 
                 <input type = "text" class = "fullname-input-form" id="name" placeholder = "Steve Smith"><br>
                 <label>Professional Qualification</label><br> 
