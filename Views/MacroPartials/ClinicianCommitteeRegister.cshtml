@@ -1,135 +1,99 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Macros.PartialViewMacroPage
-
-@using Umbraco.Cms.Core.Services
-@using Umbraco.Cms.Web.Common.Security
+@using Microsoft.AspNetCore.Http.Extensions
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Security
 @using Umbraco.Cms.Web.Website.Controllers
 @using Umbraco.Cms.Web.Website.Models
 @using Umbraco.Extensions
 @inject MemberModelBuilderFactory memberModelBuilderFactory;
-@inject IMemberExternalLoginProviders memberExternalLoginProviders
-@inject IExternalLoginWithKeyService externalLoginWithKeyService
-@{
 
-    // Build a profile model to edit
-    var profileModel = await memberModelBuilderFactory
-        .CreateProfileModel()
+@{
+    // Build a registration model with parameters
+    var registerModel = memberModelBuilderFactory
+        .CreateRegisterModel()
+        // Set the member type alias to use for the new member
+        .WithMemberTypeAlias(Constants.Conventions.MemberTypes.DefaultAlias)
         // If null or not set, this will redirect to the current page
-        .WithRedirectUrl("/profile/")
-        // Include editable custom properties on the form
+        .WithRedirectUrl("/clinicianportal/")
+        // Set to true if you want the member editable properties shown.
+        // It will only displays properties marked as "Member can edit" on the "Info" tab of the Member Type.
         .WithCustomProperties(true)
-        .BuildForCurrentMemberAsync();
+        .Build();
 
     var success = TempData["FormSuccess"] != null;
-
-    var loginProviders = await memberExternalLoginProviders.GetMemberProvidersAsync();
-    var externalSignInError = ViewData.GetExternalSignInProviderErrors();
-
-    var currentExternalLogin = profileModel is null
-        ? new Dictionary<string, string>()
-        : externalLoginWithKeyService.GetExternalLogins(profileModel.Key).ToDictionary(x=>x.LoginProvider, x=>x.ProviderKey);
+    registerModel.RedirectUrl = "/clinicianportal/";
 }
+    <link href="/css/MasterPage.css" rel="stylesheet"/>
+    <link href="/css/SignUpPage.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/Style.css" rel="stylesheet"/>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 
-<link href="/css/MasterPage.css" rel="stylesheet"/>
-<link href="/css/SignUpPage.css" rel="stylesheet"/>
-<link href="/css/Style.css" rel="stylesheet">
-
-
-@if (profileModel != null)
+@if (success)
 {
-    if (success)
+    @* This message will show if registerModel.RedirectUrl is not defined (default) *@
+    <p class="text-success">Registration succeeded.</p>
+    using (Html.BeginUmbracoForm<UmbRegisterController>(
+                            "HandleRegisterMember",
+                            new
+                            {
+                                RedirectUrl = registerModel.RedirectUrl
+                            }));
+}
+else
+{
+    using (Html.BeginUmbracoForm<UmbRegisterController>(
+            "HandleRegisterMember",
+            new {
+                MemberTypeAlias = registerModel.MemberTypeAlias,
+                UsernameIsEmail = registerModel.UsernameIsEmail,
+                RedirectUrl = registerModel.RedirectUrl
+            }))
     {
-        @* This message will show if profileModel.RedirectUrl is not defined (default) *@
-        <p class="text-success">Profile updated</p>
-    }
-
-    using (Html.BeginUmbracoForm<UmbProfileController>("HandleUpdateProfile", new { RedirectUrl = profileModel.RedirectUrl }))
-    {
-        <h2>Update your account.</h2>
-        <hr />
+    
+    <div class="container-signup">
+        <h2 class="signup-h2">Create a New Account</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
-            <label asp-for="@profileModel.Name" class="form-label"></label>
-            <input asp-for="@profileModel.Name" class="form-control" aria-required="true" />
-            <span asp-validation-for="@profileModel.Name" class="form-text text-danger"></span>
+            <label asp-for="@registerModel.Name" class="form-label"></label>
+            <input asp-for="@registerModel.Name" class="form-control" aria-required="true" />
+            <span asp-validation-for="@registerModel.Name" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="@profileModel.Email" class="form-label"></label>
-            <input asp-for="@profileModel.Email" class="form-control" autocomplete="username" aria-required="true" />
-            <span asp-validation-for="@profileModel.Email" class="form-text text-danger"></span>
-            <!--Reset Password--> 
-                    <a href="/change-password/">Reset Password</a><br><br> 
+            <label asp-for="@registerModel.Email" class="form-label"></label>
+            <input asp-for="@registerModel.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <span asp-validation-for="@registerModel.Email" class="form-text text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@registerModel.Password" class="form-label"></label>
+            <input asp-for="@registerModel.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+            <span asp-validation-for="@registerModel.Password" class="form-text text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="@registerModel.ConfirmPassword" class="form-label"></label>
+            <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+            <span asp-validation-for="@registerModel.ConfirmPassword" class="form-text text-danger"></span>
         </div>
 
-        @if (!string.IsNullOrWhiteSpace(profileModel.UserName))
+        @if (registerModel.MemberProperties != null)
         {
-            <div class="mb-3">
-                <label asp-for="@profileModel.UserName" class="form-label"></label>
-                <input asp-for="@profileModel.UserName" class="form-control" autocomplete="username" aria-required="true" />
-                <span asp-validation-for="@profileModel.UserName" class="form-text text-danger"></span>
-            </div>
-        }
-
-        @if (profileModel.MemberProperties != null)
-        {
-            for (var i = 0; i < profileModel.MemberProperties.Count; i++)
+            for (var i = 0; i < registerModel.MemberProperties.Count; i++)
             {
                 <div class="mb-3">
-                    @Html.LabelFor(m => profileModel.MemberProperties[i].Value, profileModel.MemberProperties[i].Name)
-                    <input asp-for="@profileModel.MemberProperties[i].Value" class="form-control" />
-                    @Html.HiddenFor(m => profileModel.MemberProperties[i].Alias)
-                    <span asp-validation-for="@profileModel.MemberProperties[i].Value" class="form-text text-danger"></span>
+                    @Html.LabelFor(m => registerModel.MemberProperties[i].Value, registerModel.MemberProperties[i].Name)
+                    <input asp-for="@registerModel.MemberProperties[i].Value" class="form-control" />
+                    @Html.HiddenFor(m => registerModel.MemberProperties[i].Alias)
+                    <span asp-validation-for="@registerModel.MemberProperties[i].Value" class="form-text text-danger"></span>
                 </div>
             }
         }
 
-        <button type="submit" class="btn btn-primary">Update</button>
-
-        if (loginProviders.Any())
-        {
-            <hr/>
-            <h4>Link external accounts</h4>
-
-            if (externalSignInError?.AuthenticationType is null && externalSignInError?.Errors.Any() == true)
-            {
-                @Html.DisplayFor(x => externalSignInError.Errors);
-            }
-
-            @foreach (var login in loginProviders)
-            {
-                if (currentExternalLogin.TryGetValue(login.ExternalLoginProvider.AuthenticationType, out var providerKey))
-                {
-                    @using (Html.BeginUmbracoForm<UmbExternalLoginController>(nameof(UmbExternalLoginController.Disassociate)))
-                    {
-                        <input type="hidden" name="providerKey" value="@providerKey"/>
-                        <button type="submit" name="provider" value="@login.ExternalLoginProvider.AuthenticationType">
-                            Un-Link your @login.AuthenticationScheme.DisplayName account
-                        </button>
-
-                        if (externalSignInError?.AuthenticationType == login.ExternalLoginProvider.AuthenticationType)
-                        {
-                            @Html.DisplayFor(x => externalSignInError.Errors);
-                        }
-                    }
-                }
-                else
-                {
-                    @using (Html.BeginUmbracoForm<CliniciansandCommitteeRegisterController>(
-                        "HandleRegisterMember",
-                        new {
-                            MemberTypeAlias = registerModel.MemberTypeAlias,
-                            UsernameIsEmail = registerModel.UsernameIsEmail,
-                            RedirectUrl = registerModel.RedirectUrl,
-                            memberGroup = "Clinicians and Committee"
-                        }))
-            
-                        @Html.AntiForgeryToken()
-                    }
-
-            }
-        }
+        <button type="submit" class="button-Register">Register</button>
+        
+    </div> 
+    
     }
 }
