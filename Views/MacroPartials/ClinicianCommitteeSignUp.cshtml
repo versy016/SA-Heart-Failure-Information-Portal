@@ -58,26 +58,52 @@ else
     <div class="container-signup">
         <h2 class="signup-h2">Create a Clinician or Committee Account</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
+        
+        <label>Prefix</label><br> 
+        <input type="text" class="prefix-input-form" id="prefix" placeholder="Dr."><br>
+        
         <div class="mb-3">
             <label asp-for="@registerModel.Name" class="form-label"></label>
-            <input asp-for="@registerModel.Name" class="form-control" aria-required="true" />
+            <input asp-for="@registerModel.Name" class="form-control" aria-required="true" placeholder = "John Smith"/>
             <span asp-validation-for="@registerModel.Name" class="form-text text-danger"></span>
         </div>
+        
+        <label>Professional Qualification</label><br> 
+        <input type = "text" class = "qualification-input-form" id="qualification" placeholder = "Professional Qualification"><br> 
+        
+        <label>Professional Work Address</label><br>
+        <input type = "text" class = "address-input-form" id="address" placeholder = "Professional Address"><br>
+        
+        <label>Number</label><br> 
+        <input type = "text" class = "phone-input-form" id="phone" placeholder = "0411 111 111"><br>
+        
         <div class="mb-3">
             <label asp-for="@registerModel.Email" class="form-label"></label>
-            <input asp-for="@registerModel.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <input asp-for="@registerModel.Email" class="form-control" autocomplete="username" aria-required="true" placeholder = "abc@email.com" />
             <span asp-validation-for="@registerModel.Email" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@registerModel.Password" class="form-label"></label>
-            <input asp-for="@registerModel.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+            <input asp-for="@registerModel.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder = "Enter Your Password" />
             <span asp-validation-for="@registerModel.Password" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@registerModel.ConfirmPassword" class="form-label"></label>
-            <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+            <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder = "Re-Enter Your Password" />
             <span asp-validation-for="@registerModel.ConfirmPassword" class="form-text text-danger"></span>
-        </div>
+        </div> <br> 
+        
+         <!--Security Question--> 
+        <select class = "securityOption">
+            <option value="Op1">What was the name of your first pet?</option>
+            <option value="Op2">What is your mother's maiden name?</option>
+            <option value="Op3">In what city were you born?</option>
+        </select> <br><br> 
+                
+        <label>Enter Your Security Question Answer</label><br> 
+        <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> <br>
+        <label>Re-Enter Your Security Question Answer</label><br>
+        <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br> 
 
         @if (registerModel.MemberProperties != null)
         {
@@ -91,8 +117,20 @@ else
                 </div>
             }
         }
+        
+        <form> 
+            <input type="checkbox" id="clinican" name="member" class="member" id="member" value="Clinician">
+            <label for="member">Clinician</label><br>
+            <input type="checkbox" id="clinican" name="committee" class="committee" id="committee" value="Committee Member">
+            <label for="committee">Committee Member</label><br><br> 
+        </form>
 
-        <button type="submit" class="button-Register">Register</button>
+        <button type="submit" href="/clinicianportal/" class="button-Register">Register</button><br><br>
+        
+        <!--Back to login--> 
+        <p class="login">
+            <a class="login" href="/log-in/" id="login">Already have an account? Log-in here</a>
+        </p>
         
     </div> 
     

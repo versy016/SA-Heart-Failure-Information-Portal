@@ -60,24 +60,36 @@ else
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@registerModel.Name" class="form-label"></label>
-            <input asp-for="@registerModel.Name" class="form-control" aria-required="true" />
+            <input asp-for="@registerModel.Name" class="form-control" aria-required="true" placeholder = "John Smith" />
             <span asp-validation-for="@registerModel.Name" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@registerModel.Email" class="form-label"></label>
-            <input asp-for="@registerModel.Email" class="form-control" autocomplete="username" aria-required="true" />
+            <input asp-for="@registerModel.Email" class="form-control" autocomplete="username" aria-required="true" placeholder = "abc@email.com"  />
             <span asp-validation-for="@registerModel.Email" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@registerModel.Password" class="form-label"></label>
-            <input asp-for="@registerModel.Password" class="form-control" autocomplete="new-password" aria-required="true" />
+            <input asp-for="@registerModel.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder = "Enter Your Password" />
             <span asp-validation-for="@registerModel.Password" class="form-text text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="@registerModel.ConfirmPassword" class="form-label"></label>
-            <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+            <input asp-for="@registerModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder = "Re-Enter Your Password"/>
             <span asp-validation-for="@registerModel.ConfirmPassword" class="form-text text-danger"></span>
-        </div>
+        </div> <Br> 
+        
+        <!--Security Question--> 
+        <select class = "securityOption">
+            <option value="Op1">What was the name of your first pet?</option>
+            <option value="Op2">What is your mother's maiden name?</option>
+            <option value="Op3">In what city were you born?</option>
+        </select> <br><br> 
+                
+        <label>Enter Your Security Question Answer</label><br> 
+        <input type = "text" class = "security-input-form" id="security" placeholder = "Security Question"> <br>
+        <label>Re-Enter Your Security Question Answer</label><br>
+        <input type = "text" class = "resecurity-input-form" id="resecurity" placeholder = "Re-Enter Security Question"> <br> 
 
         @if (registerModel.MemberProperties != null)
         {

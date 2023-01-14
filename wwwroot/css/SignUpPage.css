@@ -36,9 +36,32 @@ div.login-form{
 
 }
 
+.resecurity-input-form, .security-input-form, .prefix-input-form, .qualification-input-form, .address-input-form, .phone-input-form{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+
+}
+
+.login { 
+    margin-top: 5px;
+    margin-left: 11%;
+} 
+
 .button-Register{
    height: auto;
    width: 30%;
+   margin-left: 35%;
    padding: 5px;
    justify-content: center;
    margin-left: 150px;
