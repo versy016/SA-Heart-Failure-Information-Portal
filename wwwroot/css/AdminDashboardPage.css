@@ -35,7 +35,7 @@ td, th {
 /*Button*/ 
 .saveBtn { 
     margin-top: 10px;
-    margin-left: 89%;
+    margin-left: 80%;
     
     color: #fff;
     background-color: #c8102e;
@@ -50,5 +50,30 @@ td, th {
     font-weight: 700;
     padding-top: 5px;
     font-size: 18px;
+    
+} 
+
+.umbraco { 
+    margin-top: 10px;
+    margin-left: 5px;
+    
+    color: white;
+    background-color: #c8102e;
+    border-color: #c8102e;
+    padding: 4px 16px;
+    padding-top: 4px;
+    line-height: 1;
+    border-radius: 10px;
+    border-style: solid;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 5px;
+    font-size: 18px;
+    
+}
+
+.umbraco:visited { 
+  color: white;
     
 } 
